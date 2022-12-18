@@ -10,4 +10,14 @@ Rails.application.routes.draw do
   get '/me', to: 'admins#show'
   post '/login', to: 'admins#login'
   delete '/logout', to: 'admins#logout'
+
+  post '/signup', to: 'clients#signup'
+  get '/me', to: 'clients#show'
+  post '/login', to: 'clients#login'
+  delete '/logout', to: 'clients#logout'
+
+  post '/signup', to: 'drivers#signup'
+  get '/me', to: 'drivers#show'
+  post '/login', to: 'drivers#login'
+  delete '/logout', to: 'drivers#logout'
 end
