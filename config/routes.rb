@@ -1,23 +1,23 @@
 Rails.application.routes.draw do
-  resources :clients
-  resources :drivers
-  resources :admins
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+  resources :routes
+  resources :bookings
+  resources :buses
+  # resources :clients
+  # resources :drivers
+  # resources :admins
 
-  # Defines the root path route ("/")
-  # root "articles#index"
-  post '/signup', to: 'admins#signup'
-  get '/me', to: 'admins#show'
-  post '/login', to: 'admins#login'
-  delete '/logout', to: 'admins#logout'
+  post '/admin-signup', to: 'admins#signup'
+  get '/admin-me', to: 'admins#show'
+  post '/admin-login', to: 'admins#login'
+  delete '/admin-logout', to: 'admins#logout'
 
-  post '/signup', to: 'clients#signup'
-  get '/me', to: 'clients#show'
-  post '/login', to: 'clients#login'
-  delete '/logout', to: 'clients#logout'
+  post '/client-signup', to: 'clients#signup'
+  get '/client-me', to: 'clients#show'
+  post '/client-login', to: 'clients#login'
+  delete '/client-logout', to: 'clients#logout'
 
-  post '/signup', to: 'drivers#signup'
-  get '/me', to: 'drivers#show'
-  post '/login', to: 'drivers#login'
-  delete '/logout', to: 'drivers#logout'
+  post '/driver-signup', to: 'drivers#signup'
+  get '/driver-me', to: 'drivers#show'
+  post '/driver-login', to: 'drivers#login'
+  delete '/driver-logout', to: 'drivers#logout'
 end
