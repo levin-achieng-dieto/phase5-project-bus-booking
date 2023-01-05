@@ -11,8 +11,10 @@ admin1 = Admin.create(username: "levin", email: "levin@gmail.com", password: "ab
 admin2 = Admin.create(username: "dieto", email: "dieto@gmail.com", password: "123", password_confirmation: "123", phone_number: "0202587866")
 
 
-client1 = Client.create(username: "beryl", email: "beryl@mail.com", password: "q12", password_confirmation: "q12", phone_number: "0789653477")
-client2 = Client.create(username: "odipoh", email: "odipoh@mail.com", password: "w12", password_confirmation: "w12", phone_number: "0789653412")
+client1 = Client.create(username: "beryl", email: "beryl@mail.com", address: "beryl address", phone_number: "0789653477", password: "q12", password_confirmation: "q12")
+client2 = Client.create(username: "odipoh", email: "odipoh@mail.com", address: "odipoh address", phone_number: "0789653412", password: "w12", password_confirmation: "w12")
+client3 = Client.create(username: "esther", email: "esther@mail.com", address: "esther address", phone_number: "0789003477", password: "rty", password_confirmation: "rty")
+client4 = Client.create(username: "kevin", email: "kevin@mail.com", address: "kevin address", phone_number: "0777653477", password: "098", password_confirmation: "098")
 
 
 driver1 = Driver.create(username: "kevin", email: "kevin@gmail.com", password: "qwe", password_confirmation: "qwe", phone_number: "0766778890")
@@ -20,9 +22,11 @@ driver2 = Driver.create(username: "lomenen", email: "lomenen@gmail.com", passwor
 driver3 = Driver.create(username: "kevin", email: "kevin@gmail.com", password: "qwe", password_confirmation: "qwe", phone_number: "0766778800")
 
 
-route1 = Route.create(admin_id: admin1.id, from: "Nairobi", to: "Kisumu", price: "1500")
-route2 = Route.create(admin_id: admin2.id, from: "Mombasa", to: "Kisumu", price: "1200")
-route3 = Route.create(admin_id: admin1.id, from: "Nairobi", to: "Eldoret", price: "2500")
+route1 = Route.create(viacities: "Nairobi - Mombasa", busnumber: "QAA1000", date: "2023-01-28", time: "13:45", cost: "$100", admin_id: admin1.id)
+route2 = Route.create(viacities: "Nairobi - Kisumu", busnumber: "QAA1001", date: "2023-01-29", time: "15:42", cost: "$150", admin_id: admin2.id)
+route3 = Route.create(viacities: "Nairobi - Machakos", busnumber: "QAA1002", date: "2023-01-30", time: "21:32", cost: "$155", admin_id: admin1.id)
+route4 = Route.create(viacities: "Nairobi - Naivasha", busnumber: "QAA1003", date: "2023-02-02", time: "18:03", cost: "$122", admin_id: admin1.id)
+
 
 bus1 = Bus.create(number_plate: "kam234k", fleet_no: "12345", route_id: route1.id, driver_id: driver3.id)
 bus2 = Bus.create(number_plate: "kda123a", fleet_no: "09876", route_id: route2.id, driver_id: driver2.id)

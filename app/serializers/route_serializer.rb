@@ -1,3 +1,3 @@
 class RouteSerializer < ActiveModel::Serializer
-  attributes :id, :admin_id, :from, :to, :price
+  attributes :id, :viacities, :busnumber, :date, :time, :cost, :admin_id
 end
