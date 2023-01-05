@@ -1,0 +1,15 @@
+current directory: /home/kevo/Development/pppp/phase5-project-bus-booking/vendor/bundle/ruby/2.7.0/gems/bootsnap-1.15.0/ext/bootsnap
+/usr/share/rvm/rubies/ruby-2.7.4/bin/ruby -I /usr/share/rvm/rubies/ruby-2.7.4/lib/ruby/site_ruby/2.7.0 extconf.rb
+creating Makefile
+
+current directory: /home/kevo/Development/pppp/phase5-project-bus-booking/vendor/bundle/ruby/2.7.0/gems/bootsnap-1.15.0/ext/bootsnap
+make DESTDIR\= sitearchdir\=./.gem.20230105-386-8k46w6 sitelibdir\=./.gem.20230105-386-8k46w6 clean
+
+current directory: /home/kevo/Development/pppp/phase5-project-bus-booking/vendor/bundle/ruby/2.7.0/gems/bootsnap-1.15.0/ext/bootsnap
+make DESTDIR\= sitearchdir\=./.gem.20230105-386-8k46w6 sitelibdir\=./.gem.20230105-386-8k46w6
+compiling bootsnap.c
+linking shared-object bootsnap/bootsnap.so
+
+current directory: /home/kevo/Development/pppp/phase5-project-bus-booking/vendor/bundle/ruby/2.7.0/gems/bootsnap-1.15.0/ext/bootsnap
+make DESTDIR\= sitearchdir\=./.gem.20230105-386-8k46w6 sitelibdir\=./.gem.20230105-386-8k46w6 install
+/usr/bin/install -m 0755 bootsnap.so ./.gem.20230105-386-8k46w6/bootsnap
