@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "@iconscout/react-unicons": "^1.1.6",
+    "@mui/material": "^5.1.1",
+    "@mui/utils": "^5.1.1",
+    "framer-motion": "^8.0.2"
+  }
+}
