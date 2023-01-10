@@ -2,9 +2,9 @@ Rails.application.routes.draw do
   resources :routes
   resources :bookings
   resources :buses
-  # resources :clients
-  # resources :drivers
-  # resources :admins
+  resources :clients
+  resources :drivers
+  resources :admins
 
   post '/admin-signup', to: 'admins#signup'
   get '/admin-me', to: 'admins#show'
