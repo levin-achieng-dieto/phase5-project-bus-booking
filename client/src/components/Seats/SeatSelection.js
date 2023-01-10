@@ -72,7 +72,7 @@ export default function SeatSelection() {
             return (
                 <div>
                     <form key={idx} className="form seatfrm">
-              <p className="text-capitalize text-center">Seat Number:{seat}</p>
+              <p className="text-capitalize text-center">Seat No: {seat}</p>
               <input className="form-control seatInp" onBlur={e => handlePassengerName(e, seat)} type="text" name="passenger-name" placeholder="Enter Name" />
               <div className="form-check form-check-inline">
                   <input className="form-check-input" type="radio" name="gender" id="male" value="Male" onClick={e => handleGender(e, seat)} />

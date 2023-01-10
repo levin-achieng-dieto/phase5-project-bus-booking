@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   resources :routes
   resources :bookings
   resources :buses
-  # resources :clients
+  resources :clients
   # resources :drivers
   # resources :admins
 

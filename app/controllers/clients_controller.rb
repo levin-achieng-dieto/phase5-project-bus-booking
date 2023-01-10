@@ -1,5 +1,11 @@
 class ClientsController < ApplicationController
-    before_action :authorize, only: [:show]
+    before_action :authorize, only: [:show, :index]
+
+    # def index 
+    #     client = Client.find_by(id: session[:client_id])
+    #     render json: client.all, status: :unauthorized
+    # end
+
 
     def show
         client = Client.find(session[:client_id])
