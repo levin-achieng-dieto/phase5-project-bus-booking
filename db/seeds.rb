@@ -42,6 +42,8 @@ bus4 = Bus.create(number_plate: route3.busnumber, fleet_no: "78546", route_id: r
 
 
 booking1 = Booking.create(name: client1.username, phonenumber: client1.phone_number, busnumber: bus1.number_plate, viacities: route1.viacities, seat: "F2", cost: route1.cost)
+booking2 = Booking.create(name: client3.username, phonenumber: client3.phone_number, busnumber: bus2.number_plate, viacities: route4.viacities, seat: "F3", cost: route4.cost)
+booking3 = Booking.create(name: client2.username, phonenumber: client2.phone_number, busnumber: bus4.number_plate, viacities: route3.viacities, seat: "F4", cost: route3.cost)
 # booking2 = Booking.create(from: "Nairobi", to: "Eldoret", date: "2/1/2023", price: "1000", client_id: client2.id, bus_id: bus3.id, no_of_passangers: 3)
 # booking3 = Booking.create(from: "Mombasa", to: "Kisumu", date: "1/1/2023", price: "1500", client_id: client1.id, bus_id: bus2.id, no_of_passangers: 1)
 
