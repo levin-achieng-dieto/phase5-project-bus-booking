@@ -1,7 +1,35 @@
 class ClientsController < ApplicationController
-    before_action :authorize, only: [:show]
+    rescue_from ActiveRecord::RecordNotFound, with: :rescue_from_not_found_record
+    rescue_from ActiveRecord::RecordInvalid, with:  :rescue_from_invalid_record
+    before_action :authorize, only: [:me]
+
+    def index
+        render json: Client.all, status: :ok
+    end
 
     def show
+        client = Client.find_by(id: params[:id])
+        render json: client, status: :ok
+    end
+
+    def create
+        client = Client.create!(client_params)
+        render json: client, status: :created
+    end
+
+    def update
+        client = Client.find_by(id: params[:id])
+        client.update!(admin_params)
+        render json: client, status: :updated
+    end
+
+    def destroy
+        client = Client.find(params[:id])
+        client.destroy
+        head :no_content
+    end
+
+    def me
         client = Client.find(session[:client_id])
         if client
             render json: client
@@ -43,6 +71,14 @@ class ClientsController < ApplicationController
     end
 
     def client_params
-        params.permit(:username, :email, :phone_number, :password, :password_confirmation)
+        params.permit(:username, :email, :phone_number, :address, :password, :password_confirmation)
+    end
+
+    def rescue_from_not_found_record
+        render json: {error: "Client not found"}, status: :not_found 
+    end
+
+    def rescue_from_invalid_record(e)
+        render json: {errors: e.record.errors.full_messages}, status: :unprocessable_entity 
     end
 end
