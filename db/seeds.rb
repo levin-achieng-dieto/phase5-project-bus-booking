@@ -28,16 +28,24 @@ route3 = Route.create(viacities: "Nairobi - Machakos", busnumber: "QAA1002", dat
 route4 = Route.create(viacities: "Nairobi - Naivasha", busnumber: "QAA1003", date: "2023-02-02", time: "18:03", cost: "$122", admin_id: admin1.id)
 
 
-bus1 = Bus.create(number_plate: "KDK234k", fleet_no: "Q12345", route_id: route4.id, driver_id: driver1.id)
-bus2 = Bus.create(number_plate: "KDH123a", fleet_no: "Q09876", route_id: route3.id, driver_id: driver2.id)
-bus3 = Bus.create(number_plate: "KDL456l", fleet_no: "Q37829", route_id: route2.id, driver_id: driver1.id)
-bus4 = Bus.create(number_plate: "KDL123a", fleet_no: "Q08876", route_id: route1.id, driver_id: driver2.id)
-bus5 = Bus.create(number_plate: "KDM456l", fleet_no: "Q42829", route_id: route2.id, driver_id: driver2.id)
+bus1 = Bus.create(number_plate: route1.busnumber, fleet_no: "12345", route_id: route1.id, driver_id: driver3.id)
+bus2 = Bus.create(number_plate: route4.busnumber, fleet_no: "09876", route_id: route2.id, driver_id: driver2.id)
+bus3 = Bus.create(number_plate: route2.busnumber, fleet_no: "37829", route_id: route3.id, driver_id: driver1.id)
+bus4 = Bus.create(number_plate: route3.busnumber, fleet_no: "78546", route_id: route4.id, driver_id: driver2.id)
+
+    # t.string "name"
+    # t.string "phonenumber"
+    # t.string "busnumber"
+    # t.string "viacities"
+    # t.string "seat"
+    # t.string "cost"
 
 
-booking1 = Booking.create(from: "Nairobi", to: "Kisumu", date: "1/1/2023", price: "$500", client_id: client1.id, bus_id: bus1.id, no_of_passangers: 1)
-booking2 = Booking.create(from: "Nairobi", to: "Eldoret", date: "2/1/2023", price: "$100", client_id: client2.id, bus_id: bus3.id, no_of_passangers: 3)
-booking3 = Booking.create(from: "Mombasa", to: "Kisumu", date: "1/1/2023", price: "$150", client_id: client1.id, bus_id: bus2.id, no_of_passangers: 1)
+booking1 = Booking.create(name: client1.username, phonenumber: client1.phone_number, busnumber: bus1.number_plate, viacities: route1.viacities, seat: "F2", cost: route1.cost)
+booking2 = Booking.create(name: client3.username, phonenumber: client3.phone_number, busnumber: bus2.number_plate, viacities: route4.viacities, seat: "F3", cost: route4.cost)
+booking3 = Booking.create(name: client2.username, phonenumber: client2.phone_number, busnumber: bus4.number_plate, viacities: route3.viacities, seat: "F4", cost: route3.cost)
+# booking2 = Booking.create(from: "Nairobi", to: "Eldoret", date: "2/1/2023", price: "1000", client_id: client2.id, bus_id: bus3.id, no_of_passangers: 3)
+# booking3 = Booking.create(from: "Mombasa", to: "Kisumu", date: "1/1/2023", price: "1500", client_id: client1.id, bus_id: bus2.id, no_of_passangers: 1)
 
 
 puts 'done seeding'
