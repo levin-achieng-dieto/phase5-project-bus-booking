@@ -7,42 +7,14 @@ import {
   } from "@iconscout/react-unicons";
   
 
-  
-//   export const SidebarData = [
-//     {
-//       icon: UilEstate,
-//       heading: "Dashboard",
-//     },
-//     {
-//       icon: UilSubway,
-//       heading: "Buses",
-//     },
-//      {
-//       icon: UilMap,
-//        heading: "Routes",
-//      },
-//     {
-//       icon: UilDialpad,
-//       heading: "Seats"
-//     },
-
-//     {
-//         icon: UilUsersAlt,
-//         heading: "Customers",
-//     },
-//     {
-//         icon: UilUsersAlt,
-//         heading: "Bookings",
-//     },
-// ]
 
 
 export const cardsData = [
     {
       title: "Seats",
       color: {
-        // backGround: "linear-gradient(180deg, #bb67ff 0%, #c484f3 100%)",
-        // boxShadow: "0px 10px 20px 0px #788097",
+        backGround: "linear-gradient(180deg, #bb67ff 0%, #c484f3 100%)",
+        boxShadow: "0px 10px 20px 0px #788097",
       },
       barValue: 20,
       value:"12,000",
@@ -57,8 +29,8 @@ export const cardsData = [
     {
       title: "Buses",
       color: {
-        // backGround: "linear-gradient(10deg, #FF919D 0%, #FC929D 100%)",
-        // boxShadow: "0px 10px 20px 0px #788097",
+        backGround: "linear-gradient(10deg, #FF919D 0%, #FC929D 100%)",
+        boxShadow: "0px 10px 20px 0px #788097",
       },
       barValue: 70,
       value: '14,270',
@@ -73,9 +45,9 @@ export const cardsData = [
     {
       title: "Customers",
       color: {
-        // backGround:
-        //   "linear-gradient(rgb(248, 212, 154) -146.42%, rgb(255 202 113) -46.42%)",
-        // boxShadow: "0px 10px 20px 0px #788097",
+        backGround:
+          "linear-gradient(rgb(248, 212, 154) -146.42%, rgb(255 202 113) -46.42%)",
+        boxShadow: "0px 10px 20px 0px #788097",
       },
       barValue: 60,
       value: "4,270",
@@ -90,9 +62,9 @@ export const cardsData = [
     {
       title: "Bookings",
       color: {
-        // backGround: "linear-gradient(180deg, #788097 0%, #FC929D 100%)",
-        // boxShadow: "0px 10px 20px 0px #788097",
-        // --boxShadow: 0px 19px 60px rgba(62, 14, 153, 0.08);
+        backGround: "linear-gradient(180deg, #788097 0%, #FC929D 100%)",
+        boxShadow: "0px 10px 20px 0px #788097",
+        // boxShadow: "0px 19px 60px rgba(62, 14, 153, 0.08)"
         
       },
       barValue: 60,

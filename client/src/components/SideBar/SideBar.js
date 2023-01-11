@@ -44,6 +44,7 @@ const Sidebar = () => {
         icon: UilUsersAlt,
         heading: "Bookings",
       },
+    
   ]
   const linkStyle = {
     margin: "1rem",
@@ -56,7 +57,7 @@ const Sidebar = () => {
   {/* {logo} */}
    <div className="logo">
         <img src={Logo} alt="logo" />
-        <span>
+        <span >
           BUSES
         </span>
       </div>

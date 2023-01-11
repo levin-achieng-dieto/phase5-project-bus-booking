@@ -4,12 +4,14 @@
   position: relative;
   padding-top: 4rem;
   transition: all 200ms ease;
+ 
   
 
 }
 /* logo */
 .bars{
   display: none;
+  
 }
 
 .logo {
@@ -21,6 +23,9 @@
   align-items: center;
   justify-content: center;
   height: 20%;
+  font-family: cursive;
+  
+  
 }
 
 .logo > img {
@@ -35,6 +40,8 @@
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  font-weight: 700;
+  font-family: cursive;
 
 }
 .menuItem {
@@ -101,6 +108,7 @@
   }
   .logo{
     display: flex;
+    
   }
   .menu .menuItem:last-child {
     position: relative;
