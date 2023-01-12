@@ -3,7 +3,7 @@ import Styles from "./BusBookingForm.module.css";
 import { MdAccountCircle } from "react-icons/md";
 import { MdEmail } from "react-icons/md";
 import { FaWhatsapp } from "react-icons/fa";
-import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { updateBookingDetails } from "../../Redux/BookBus/action";
 
@@ -26,7 +26,7 @@ const BusBookingForm = () => {
   const [passIsCovidDonate, setPassIsCovidDonate] = React.useState(false);
   const [passInsurance, setPassInsurance] = React.useState(false);
 
-  let history = useHistory();
+  let history = useNavigate ();
   let dispatch = useDispatch();
   const handleProceedToPay = () => {
     const payload1 = {
