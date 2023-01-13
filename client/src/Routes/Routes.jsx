@@ -1,6 +1,6 @@
 import React from "react";
-import {  Route } from "react-router-dom";
-// import SelectBus from "../Components/SelectBus/SelectBus";
+import { Route } from "react-router-dom";
+import SelectBus from "../Components/BusDetails/SelectBus/SelectBus";
 // import Error from "../Components/Error/Error";
 // import Profile from "../Components/Profile Page/Profile";
 // import Payment from "../Components/Payment Page/Payment";
@@ -16,11 +16,11 @@ const Routes = () => {
       <Routes>
         {/* <Route path="/" exact>
           <LandingPage />
-        </Route>
+        </Route> */}
         <Route path="/select-bus" exact>
           <SelectBus />
         </Route>
-        <Route path="/my-profile" exact>
+        {/* <Route path="/my-profile" exact>
           <Profile />
         </Route> */}
         {/* <Route path="/payment-page" exact>
