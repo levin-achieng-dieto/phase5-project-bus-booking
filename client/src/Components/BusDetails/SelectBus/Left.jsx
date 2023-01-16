@@ -2,6 +2,8 @@ import React from "react";
 import styles from "./Left.module.css";
 import { useSelector, useDispatch } from "react-redux";
 import { updateFilterDetails } from "../../Redux/FilterAndSort/action";
+
+// import { updateFilterDetails } from "../src/Redux/FilterAndSort/action.js"
 import CheckCircleOutlineIcon from "@material-ui/icons/CheckCircleOutline";
 import GpsFixedIcon from "@material-ui/icons/GpsFixed";
 import RestoreIcon from "@material-ui/icons/Restore";
