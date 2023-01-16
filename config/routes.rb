@@ -16,6 +16,14 @@ Rails.application.routes.draw do
   post '/client-login', to: 'clients#login'
   delete '/client-logout', to: 'clients#logout'
 
+  post '/buses/addbus', to: 'buses#create'
+ 
+ 
+ 
+
+
+
+
   post '/driver-signup', to: 'drivers#signup'
   get '/driver-me', to: 'drivers#me'
   post '/driver-login', to: 'drivers#login'

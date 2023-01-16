@@ -29,19 +29,21 @@
 }
 
 .logo > img {
-  width: 4rem;
-  height: 4rem;
+  width: 4.5rem;
+  height: 4.5rem;
+ 
 }
 
 
 /* menu */
 .menu {
-  margin-top: 1rem;
+  /* margin-top: 0.1rem; */
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 0.5rem;
   font-weight: 700;
   font-family: cursive;
+  
 
 }
 .menuItem {
@@ -76,10 +78,10 @@
 }
 .active::before {
   content: "";
-  width: 8px;
+  width: 12px;
   height: 100%;
   /* background: var(--pink); */
-  background-color: rgb(98, 144, 164);
+  background-color: rgb(66, 67, 68);
   margin-right: calc(1rem - 8px);
 }
 
@@ -119,7 +121,7 @@
     position: fixed;
     top: 2rem;
     left:60%;
-    background:#e0f1ff;
+    /* background:#e0f1ff; */
     padding:10px;
     border-radius: 10px;
     z-index: 9;

@@ -1,48 +1,48 @@
 // import "./BusTable.css";
 import { Button, Table, Modal, Input } from "antd";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { EditOutlined, DeleteOutlined } from "@ant-design/icons";
 
 function BusTable() {
   const [isEditing, setIsEditing] = useState(false);
   const [editingCustomer, setEditingCustomer] = useState(null);
-  const [dataSource, setDataSource] = useState([
-    {
-      id: 1,
-      name: "Levin",
-      email: "Levin@gmail.com",
-      address: "Levin Address",
-      phonenumber: "+96500011111",
+  // const [dataSource, setDataSource] = useState([
+  //   {
+  //     id: 1,
+  //     name: "Levin",
+  //     email: "Levin@gmail.com",
+  //     address: "Levin Address",
+  //     phonenumber: "+96500011111",
     
-    },
-    {
-      id: 2,
-      name: "Esther",
-      email: "Esther@gmail.com",
-      address: "Esther Address",
-      phonenumber: "+65700011111",
-    
-    
-    },
-    {
-      id: 3,
-      name: "Kevin",
-      email: "Kevin@gmail.com",
-      address: "Kevin Address",
-      phonenumber: "+86500011111",
+  //   },
+  //   {
+  //     id: 2,
+  //     name: "Esther",
+  //     email: "Esther@gmail.com",
+  //     address: "Esther Address",
+  //     phonenumber: "+65700011111",
     
     
-    },
-    {
-      id: 4,
-      name: "Beryl",
-      email: "Beryl@gmail.com",
-      address: "Beryl Address",
-      phonenumber: "+7200011111",
+  //   },
+  //   {
+  //     id: 3,
+  //     name: "Kevin",
+  //     email: "Kevin@gmail.com",
+  //     address: "Kevin Address",
+  //     phonenumber: "+86500011111",
     
-    },
+    
+  //   },
+  //   {
+  //     id: 4,
+  //     name: "Beryl",
+  //     email: "Beryl@gmail.com",
+  //     address: "Beryl Address",
+  //     phonenumber: "+7200011111",
+    
+  //   },
 
-  ]);
+  // ]);
   const columns = [
     {
       key: "1",
@@ -52,7 +52,7 @@ function BusTable() {
     {
         key: "2",
         title: "Name",
-        dataIndex: "name",
+        dataIndex: "username",
       },
       {
         key: "3",
@@ -67,7 +67,7 @@ function BusTable() {
       {
         key: "4",
         title: "Phone Number",
-        dataIndex: "phonenumber",
+        dataIndex: "phone_number",
       },
 
     {
@@ -127,7 +127,18 @@ function BusTable() {
     setEditingCustomer(null);
   };
 
- 
+  const [dataSource, setDataSource]= useState([
+
+    useEffect( ()=>{
+        const getUserdata= async()=>{
+            const reqData= await fetch("/clients");
+            const resData= await reqData.json();
+            setDataSource(resData);
+            console.log(resData);
+        }
+        getUserdata();
+    },[])
+]);
 
   return (
     <div className="Table">

@@ -1,6 +1,9 @@
 import React,{ useEffect, useState } from "react";
 import { Button, Table, Modal, Input } from "antd";
 import { EditOutlined, DeleteOutlined } from "@ant-design/icons";
+import { Link } from 'react-router-dom';
+
+
 
 function Buses() {
 
@@ -10,9 +13,19 @@ function Buses() {
  const columns = [
     {
       key: "1",
-      title: "ID",
+      title: "#",
       dataIndex: "id",
-    },
+    }, 
+    {
+      key: "2",
+      title: "Buses",
+      dataIndex: "image",
+      render: (link) => {
+        return <img style={{width:"120px", height:"50px"}}src={link} />;
+      }
+    }, 
+  
+   
     {
       key: "2",
       title: "Number_Plate",
@@ -37,7 +50,7 @@ function Buses() {
             />
             <DeleteOutlined
               onClick={() => {
-                onDeleteBus(record);
+                handleDeleteBus(record);
               }}
               style={{ color: "red", marginLeft: 20 }}
             />
@@ -58,7 +71,7 @@ function Buses() {
       return [...pre, newBus];
     });
   };
-  const onDeleteBus = (record) => {
+  const handleDeleteBus = (record) => {
     Modal.confirm({
       title: "Are you sure, you want to delete this Bus?",
       okText: "Yes",
@@ -70,6 +83,11 @@ function Buses() {
       },
     });
   };
+
+
+
+
+  
   const onEditBus = (record) => {
     setIsEditing(true);
     setEditingBus({ ...record });
@@ -95,21 +113,12 @@ function Buses() {
 ]);
 
 
-// function handleDeleteBus() {
-//     fetch(`/logout/${id}`, {
-//       method: "DELETE",
-//     }).then((r) => {
-//       if (r.ok) {
-//         onDeleteBus(bus);
-//       }
-//     });
-//   }
- 
+ console.log(dataSource)
     return (
         <div className="Table">
         <header >
           <h3> BUS STATUS</h3>
-          <Button onClick={onAddBus} style={{backgroundColor: 'lightblue'}}>Add Bus Details +</Button>
+          <Button onClick={onAddBus} style={{backgroundColor: 'lightgrey', color:"black"}}> <Link to={"/add-bus"}>Add Bus Details + </Link></Button>
           <Table columns={columns} dataSource={dataSource}></Table>
           <Modal
             title="Edit Bus"

@@ -1,2 +1,4 @@
 class Route < ApplicationRecord
+
+
 end

@@ -1,0 +1,27 @@
+.product-item {
+    text-align: center;
+    margin-top: 5px;
+  
+  }
+  
+  .product-item ul li {
+    display: inline-block;
+    width: 130px;
+    border: 1.3px solid skyblue;
+    padding: 5px;
+  }
+  
+  .product-item ul{
+    margin: 0;
+  }
+  
+
+  
+  @keyframes App-logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }

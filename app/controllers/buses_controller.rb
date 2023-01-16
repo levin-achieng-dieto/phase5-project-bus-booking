@@ -30,7 +30,7 @@ rescue_from ActiveRecord::RecordInvalid, with:  :rescue_from_invalid_record
 
     private
     def bus_params
-        params.permit(:number_plate, :fleet_no, :route_id)
+        params.permit(:number_plate, :fleet_no,:image,:route_id)
     end
 
     def rescue_from_not_found_record

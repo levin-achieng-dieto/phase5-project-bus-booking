@@ -7,7 +7,7 @@ class BookingsController < ApplicationController
     end
 
     def create
-        bookings = clinet.booking.create!(booking_params)
+        bookings = Booking.create!(booking_params)
         render json: bookings, status: :created
     end
 
@@ -30,7 +30,7 @@ class BookingsController < ApplicationController
 
     private
     def booking_params
-        params.permit(:name, :phonenumber, :busnumber, :viacities, :seat, :cost)
+        params.permit(:name, :phonenumber, :busnumber, :from,:to, :seat, :cost)
     end
 
     def rescue_from_not_found_record

@@ -24,7 +24,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_10_071819) do
     t.string "name"
     t.string "phonenumber"
     t.string "busnumber"
-    t.string "viacities"
+    t.string "from"
+    t.string "to"
     t.string "seat"
     t.string "cost"
     t.datetime "created_at", null: false
@@ -34,6 +35,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_10_071819) do
   create_table "buses", force: :cascade do |t|
     t.string "number_plate"
     t.string "fleet_no"
+    t.string "image"
     t.integer "route_id"
     t.integer "driver_id"
     t.datetime "created_at", null: false
@@ -60,11 +62,13 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_10_071819) do
   end
 
   create_table "routes", force: :cascade do |t|
-    t.string "viacities"
+    t.string "from"
+    t.string "to"
     t.string "busnumber"
     t.string "date"
     t.string "time"
     t.string "cost"
+    t.string "image"
     t.integer "admin_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

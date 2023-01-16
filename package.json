@@ -1,8 +1,13 @@
 {
   "dependencies": {
     "@iconscout/react-unicons": "^1.1.6",
+    "@material-ui/icons": "^4.11.3",
     "@mui/material": "^5.1.1",
     "@mui/utils": "^5.1.1",
-    "framer-motion": "^8.0.2"
+    "framer-motion": "^8.0.2",
+    "styled-components": "^5.3.6"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.2.4"
   }
 }

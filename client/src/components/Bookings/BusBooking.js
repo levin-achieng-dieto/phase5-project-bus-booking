@@ -1,50 +1,49 @@
 import { Button, Table, Modal, Input } from "antd";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { EditOutlined, DeleteOutlined } from "@ant-design/icons";
-// import SeatSelection from "../Seats/SeatSelection";
 
 function BusBooking() {
   const [isEditing, setIsEditing] = useState(false);
   const [editingBus, setEditingBus] = useState(null);
-  const [dataSource, setDataSource] = useState([
-    {
-      id: 42,
-      name: "Dima",
-      phonenumber: "+96500011111",
-      busnumber: "QAA1000",
-      viacities: "Nairobi - Mombasa",
-      seat: "F2",
-      cost:" $100",
-      date: "2023-01-28, 13:45",
-      time: "2023-01-28, 13:45",
+  // const [dataSource, setDataSource] = useState([
+  //   {
+  //     id: 42,
+  //     name: "Dima",
+  //     phonenumber: "+96500011111",
+  //     busnumber: "QAA1000",
+  //     viacities: "Nairobi - Mombasa",
+  //     seat: "F2",
+  //     cost:" $100",
+  //     date: "2023-01-28, 13:45",
+  //     time: "2023-01-28, 13:45",
     
-    },
-    {
-      id: 24,
-      name: "Esther",
-      phonenumber: "+50001568291",
-      busnumber: "QAA1000",
-      viacities: "Nairobi - Nakuru",
-      seat: "F4",
-      cost:" $120",
-      date: "2023-01-28, 13:45",
-      time: "2023-01-28, 13:45",
+  //   },
+  //   {
+  //     id: 24,
+  //     name: "Esther",
+  //     phonenumber: "+50001568291",
+  //     busnumber: "QAA1000",
+  //     viacities: "Nairobi - Nakuru",
+  //     seat: "F4",
+  //     cost:" $120",
+  //     date: "2023-01-28, 13:45",
+  //     time: "2023-01-28, 13:45",
     
-    },
-    {
-      id: 27,
-      name: "Mali",
-      phonenumber: "+2000443111",
-      busnumber: "QAA1000",
-      viacities: "Nairobi - Nanyuki",
-      seat: "F3",
-      cost:" $150",
-      date: "2023-01-28, 13:45",
-      time: "2023-01-28, 13:45",
+  //   },
+  //   {
+  //     id: 27,
+  //     name: "Mali",
+  //     phonenumber: "+2000443111",
+  //     busnumber: "QAA1000",
+  //     viacities: "Nairobi - Nanyuki",
+  //     seat: "F3",
+  //     cost:" $150",
+  //     date: "2023-01-28, 13:45",
+  //     time: "2023-01-28, 13:45",
     
-    },
+  //   },
 
-  ]);
+  // ]);
   const columns = [
     {
       key: "1",
@@ -68,8 +67,13 @@ function BusBooking() {
     },
     {
       key: "5",
-      title: "Route",
-      dataIndex: "viacities",
+      title: "From",
+      dataIndex: "from",
+    },
+    {
+      key: "5",
+      title: "To",
+      dataIndex: "to",
     },
     {
       key: "3",
@@ -81,16 +85,16 @@ function BusBooking() {
       title: "Amount",
       dataIndex: "cost",
     },
-    {
-      key: "4",
-      title: "Departure",
-      dataIndex: "date",
-    },
-    {
-      key: "5",
-      title: "Booked",
-      dataIndex: "time",
-    },
+    // {
+    //   key: "4",
+    //   title: "Departure Date",
+    //   dataIndex: "date",
+    // },
+    // {
+    //   key: "5",
+    //   title: "Depature Time",
+    //   dataIndex: "time",
+    // },
 
     {
       key: "4",
@@ -148,6 +152,24 @@ function BusBooking() {
     setIsEditing(false);
     setEditingBus(null);
   };
+
+
+  const [dataSource, setDataSource]= useState([
+
+    useEffect( ()=>{
+        const getUserdata= async()=>{
+            const reqData= await fetch("/bookings");
+            const resData= await reqData.json();
+            setDataSource(resData);
+            console.log(resData);
+        }
+        getUserdata();
+    },[])
+]);
+
+
+
+
   return (
     <div className="Table">
       <header >

@@ -2,7 +2,8 @@ import React, {useState}from "react";
 import "./SideBar.css";
 import Logo from "./logo.png";
 import { Link } from "react-router-dom";
-import { UilSignOutAlt, UilEstate, UilSubway, UilUsersAlt, UilMap, UilDialpad, } from "@iconscout/react-unicons";
+import { AiFillHome } from "react-icons/ai";
+import { UilSignOutAlt, UilSubway, UilUsersAlt, UilMap, UilDialpad, } from "@iconscout/react-unicons";
 
 const Sidebar = () => {
     const [selected, setSelected] = useState(0);
@@ -10,7 +11,7 @@ const Sidebar = () => {
     const SidebarData = [
       {
         path: "/",
-        icon: UilEstate,
+        icon: AiFillHome,
         heading: "Dashboard",
       },
       {
@@ -44,6 +45,12 @@ const Sidebar = () => {
         icon: UilUsersAlt,
         heading: "Bookings",
       },
+      {
+     
+        path: "/payments",
+        icon: UilUsersAlt,
+        heading: "Payment",
+      },
     
   ]
   const linkStyle = {
@@ -51,14 +58,18 @@ const Sidebar = () => {
     textDecoration: "none",
     color: 'black'
   };
+  const linkStyle1 = {
+    color: 'black',
+    fontFamily: "fanstasy"
+  };
 
     return(
  <div className ="Sidebars">
   {/* {logo} */}
    <div className="logo">
         <img src={Logo} alt="logo" />
-        <span >
-          BUSES
+        <span style={linkStyle1}>
+          Knight Travel Agencies
         </span>
       </div>
      

@@ -1,9 +1,9 @@
-/* *, *:before, *:after {
+*, *:before, *:after {
     box-sizing: border-box;
  
-} */
-/* 
-html {
+}
+
+/* html {
     font-size: 2px;
 } */
 
@@ -28,20 +28,23 @@ ol {
 .seats {
     display: flex;
     justify-content: space-around;
-    flex-direction: row;
+   flex-direction: row;
     flex-wrap: nowrap;
     width: 240px;
 }
 
 .seat {
     display: flex;
-    flex: 0 0 14.2857142857%;
-    padding: 5px;
+    flex: 0 0 13.2857142857%;
+    padding: 6px;
     position: relative;
 }
 
-.seat:nth-child(3) {
-    margin-right: 1.2857142857%;
+.seat:nth-child(2) {
+    margin-right: 6%;
+}
+.seat:nth-child(4) {
+    margin-right: 6%;
 }
 
 .seat input[type=checkbox] {
@@ -50,8 +53,8 @@ ol {
 }
 
 .seat input[type=checkbox]:checked+label {
-    background: #566c61;
-    color: rgb(128, 170, 188);
+    background: #04964d;
+    color: rgb(4, 0, 0);
     -webkit-animation-name: rubberBand;
     animation-name: rubberBand;
     animation-duration: 300ms;
@@ -59,7 +62,7 @@ ol {
 }
 
 .seat input[type=checkbox]:disabled+label {
-    background: rgb(210, 140, 145);
+    background: rgb(202, 39, 50);
     text-indent: -9999px;
     overflow: hidden;
 }
@@ -87,11 +90,11 @@ ol {
     font-weight: bold;
     line-height: 1.5rem;
     padding: 4px 0;
-    background: #72badc;
+    background: #cccfd0;
     border-radius: 8px;
     animation-duration: 300ms;
     animation-fill-mode: both;
-    color: white;
+    color: rgb(4, 0, 0);
 }
 
 .seat label:before {
@@ -102,13 +105,13 @@ ol {
     top: 1px; 
     left: 50%;
     transform: translate(-50%, 0%);
-    background: rgba(234, 242, 242, 0.4);
+    background: rgba(244, 241, 241, 0.4);
     border-radius: 3px;
 }
 
 .seat label:hover {
     cursor: pointer;
-    box-shadow: 0 0 0px 2px #2a74be;
+    box-shadow: 0 0 0px 2px #36ce5f;
 }
 
 @-webkit-keyframes rubberBand {
@@ -188,6 +191,7 @@ ol {
     width: 50%;
     padding: 0;
     margin: 0;
+    overflow: hidden;
 }
 
 /* Clear floats after the columns */
@@ -215,17 +219,20 @@ ol {
     border-radius: 10px;
 }
 
-/* .seatfrm{
-    border:1px solid white;
-} */
+.seatfrm{
+    /* border:1px solid white; */
+    overflow: hidden;
+   margin-left: 90px;
+  
+}
 .seatInp{
     margin-right:-8px;
-    width:75%;
+    width:100%;
 }
 
 .form-check{
     margin-left: 100px;
-    margin-top:15px;
+    margin-top:4px;
 }
 
 .seatBT{

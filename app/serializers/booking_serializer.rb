@@ -1,3 +1,3 @@
 class BookingSerializer < ActiveModel::Serializer
-  attributes :id, :name, :phonenumber, :busnumber, :viacities, :seat, :cost
+  attributes :id, :name, :phonenumber, :busnumber, :from, :to, :seat, :cost
 end
