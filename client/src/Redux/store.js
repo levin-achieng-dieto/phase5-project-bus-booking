@@ -1,4 +1,4 @@
-import { createStore, combineReducers, applyMiddleware, compose } from "redux";
+import {configureStore, combineReducers, applyMiddleware, compose } from "@reduxjs/toolkit";
 import thunk from "redux-thunk";
 import { authReducer } from "./auth/authReducer";
 import { busDetailsReducer } from "./BookBus/reducer";
@@ -23,6 +23,6 @@ if (process.env.NODE_ENV !== "production") {
 
 const enhancer = composeEnhancers(applyMiddleware(thunk));
 
-const store = createStore(rootReducer, enhancer);
+const store = configureStore(rootReducer, enhancer);
 
 export default store;
