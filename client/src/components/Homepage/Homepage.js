@@ -1,16 +1,16 @@
 import React from 'react';
 import './Homepage.css';
+import {Link} from "react-router-dom"
 
-export default function Homepage({ history }) {
-    const enterSite = e => {
-        e.preventDefault();
-        history.push('/login')
-    }
+export default function Homepage() {
+   
     
     return (
-        <div className="container main-cnt">
+       
+        <div className="homepage">
             <div className="header-nav">
-                <span className="mytext1">Let's Travel</span>
+                <span className="mytext1">Knight Travel Agencis</span>
+                
             </div>
 
             <div></div>
@@ -18,7 +18,7 @@ export default function Homepage({ history }) {
             <div className="container">
                 <div className="slogan">
                     <h1>
-                        <span className="cc">always travel</span>
+                        <span className="cc">ALWAYS TRAVEL</span>
                         <div className="message">
                             <div className="word1">uniquely</div>
                             <div className="word2">safely</div>
@@ -27,19 +27,21 @@ export default function Homepage({ history }) {
                     </h1>
                 </div>
 
-                <a href="/#" onClick={e => enterSite(e)} className="mainBtn">
+                <Link to="/login" className="mainBtn">
                     <svg width="277" height="62">
                         <defs>
                             <linearGradient id="grad1">
-                                <stop offset="0%" stopColor="#FF8282" />
-                                <stop offset="100%" stopColor="#E178ED" />
+                                <stop offset="0%" stopColor="black" />
+                                <stop offset="100%" stopColor="black" />
                             </linearGradient>
                         </defs>
                         <rect x="5" y="5" rx="25" fill="none" stroke="url(#grad1)" width="266" height="50"></rect>
                     </svg>
-                    <span>Get Started!</span>
-                </a>
+                    <span>Get Started</span> 
+                </Link>
+                
             </div>
         </div>
+        
     )
 }

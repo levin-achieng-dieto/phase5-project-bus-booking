@@ -21,7 +21,7 @@ function Buses() {
       title: "Buses",
       dataIndex: "image",
       render: (link) => {
-        return <img style={{width:"120px", height:"50px"}}src={link} />;
+        return <img style={{width:"120px", height:"50px"}}src={link} alt={link}/>;
       }
     }, 
   

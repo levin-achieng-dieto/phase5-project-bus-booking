@@ -97,7 +97,7 @@ const Sidebar = () => {
 
            {/* signoutIcon */}
            <div className="menuItem">
-          <UilSignOutAlt />
+          <Link to ="/login"> <UilSignOutAlt /> </Link>
         </div>
     
 

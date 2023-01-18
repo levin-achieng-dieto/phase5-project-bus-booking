@@ -4,11 +4,8 @@ import "./MainDash.css";
 // import BusTable from '../components/Table/BusTable';
 import {Routes,Route} from "react-router-dom"
 import BusRoutes from '../components/Routes/BusRoutes';
-import Card from '../components/Bus/Card';
 // import Bus from '../components/Bus/Bus';
 import Buses from '../components/Bus/Buses';
-
-
 // import Customers from '../components/Customers/Customers';
 import User from '../components/Customers/User';
 import SeatSelection from '../components/Seats/SeatSelection';
@@ -18,6 +15,7 @@ import AddUser from '../components/Customers/AddUser';
 import Booking from '../components/Booking1/Booking';
 import Payment from '../components/Payment/Payment';
 import Ticket from '../components/Payment/Ticket';
+import AdminLogin from '../components/Auth/AdminLogin';
 
 
 
@@ -32,7 +30,7 @@ function MainDash() {
       <Route exact path ='/' element ={<Cards/>}></Route> 
       {/* <Route path='/seats' element={<><SeatSelection /> <Footer /></>} />
       <Route path='/bookings' element={<><BusBooking/> <Footer /></>} />  */}
-      {/* <Route exact path= "/buses" element ={<Card/>}></Route>  */}
+   
       {/* <Route exact path= "/buses" element ={<Bus/>}></Route>  */}
       <Route exact path= "/buses" element ={<Buses/>}></Route> 
       
@@ -47,6 +45,7 @@ function MainDash() {
       <Route exact path= "/seats" element ={<Booking/>}></Route>
       <Route exact path= "/payments" element ={<Payment/>}></Route>
       <Route exact path= "/ticket" element ={<Ticket/>}></Route>
+      <Route exact path= "/login" element ={<AdminLogin/>}></Route>
       
   
       </Routes>
