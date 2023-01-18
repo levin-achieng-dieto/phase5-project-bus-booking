@@ -7,7 +7,7 @@ class BookingsController < ApplicationController
     end
 
     def create
-        bookings = clinet.booking.create!(booking_params)
+        bookings = Booking.create!(booking_params)
         render json: bookings, status: :created
     end
 

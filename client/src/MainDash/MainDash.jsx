@@ -14,12 +14,12 @@ function MainDash() {
   return (
     <div className="MainDash">
       <Routes>
-      <Route exact path ='/' element ={<Cards/>}></Route>
-      <Route  exact path= "/buses" element ={<BusTable/>}></Route>
-      <Route exact path= "/routes" element ={<BusRoutes/>}></Route>
-      <Route exact path= "/customers" element ={<Customers/>}></Route>
-      <Route exact path= "/seats" element ={<SeatSelection/>}></Route>
-      <Route exact path= "/bookings" element ={<BusBooking/>}></Route>
+        <Route exact path ='/' element ={<Cards/>}></Route>
+        <Route  exact path= "/buses" element ={<BusTable/>}></Route>
+        <Route exact path= "/routes" element ={<BusRoutes/>}></Route>
+        <Route exact path= "/customers" element ={<Customers/>}></Route>
+        <Route exact path= "/seats" element ={<SeatSelection/>}></Route>
+        <Route exact path= "/bookings" element ={<BusBooking/>}></Route>
       </Routes>
   </div>
 

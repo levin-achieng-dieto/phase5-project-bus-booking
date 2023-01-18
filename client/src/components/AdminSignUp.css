@@ -1,0 +1,88 @@
+.form {
+    font-size: 30px;
+    border-radius: 2rem;
+    border-color: red;
+    box-shadow: 2rem;
+    text-align: center;
+
+}
+
+.username{
+    display: flex;
+    align-items: center;
+    gap: 10rem;
+    height: 3rem;
+    margin-left: 47rem;
+    position: relative;
+    transition: all 300ms ease;
+    border-radius: 0.7rem;
+    font-size: 20px;
+}
+
+.phonenumber {
+    display: flex;
+    align-items: center;
+    gap: 7.5rem;
+    height: 3rem;
+    margin-left: 47rem;
+    position: relative;
+    transition: all 300ms ease;
+    border-radius: 0.7rem;
+    font-size: 20px;
+}
+
+.email {
+    display: flex;
+    align-items: center;
+    gap: 12rem;
+    height: 3rem;
+    margin-left: 47rem;
+    position: relative;
+    transition: all 300ms ease;
+    border-radius: 0.7rem;
+    font-size: 20px;
+}
+
+.password {
+    display: flex;
+    align-items: center;
+    gap: 10rem;
+    height: 3rem;
+    margin-left: 47rem;
+    position: relative;
+    transition: all 300ms ease;
+    border-radius: 0.7rem;
+    font-size: 20px;
+}
+
+.confirm-password {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    height: 3rem;
+    margin-left: 47rem;
+    position: relative;
+    transition: all 300ms ease;
+    border-radius: 0.7rem;
+    font-size: 20px;
+}
+
+.btn {
+    display: flex;
+  align-items: center;
+  gap: 10rem;
+  height: 3rem;
+  margin-left: 47rem;
+  position: relative;
+  transition: all 300ms ease;
+  border-radius: 1.5 rem;
+  font-size: 20px;
+  border-width: 0.2rem;
+  background-color: rgb(135, 185, 219);
+}
+
+.form-control {
+    height: 20px;
+    border-width: 0.2rem;
+    border-color: black;
+}

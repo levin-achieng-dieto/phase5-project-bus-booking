@@ -1,0 +1,18 @@
+.flex {
+    display: flex;
+    margin-left: 20%;
+    margin-right: 20%;
+    justify-content: space-between;
+    padding-top: 3%;
+    height: 40px;
+    background-color: rgb(135, 185, 219);
+    width: 60%;
+}
+
+.signup{
+    margin-right: 10px;
+}
+
+.login{
+    margin-left: 10px;
+}

@@ -52,7 +52,7 @@ const Sidebar = () => {
   };
 
     return(
- <div className ="Sidebars">
+ <div className ="Sidebar">
   {/* {logo} */}
    <div className="logo">
         <img src={Logo} alt="logo" />
