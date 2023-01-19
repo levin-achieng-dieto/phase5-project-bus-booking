@@ -1,6 +1,7 @@
 import { Button, Table, Modal, Input } from "antd";
 import { useState, useEffect  } from "react";
 import { EditOutlined, DeleteOutlined } from "@ant-design/icons";
+import { Link } from 'react-router-dom';
 
 function BusRoutes() {
   const [isEditing, setIsEditing] = useState(false);
@@ -14,12 +15,12 @@ function BusRoutes() {
     },
     {
       key: "2",
-      title: "From",
+      title: "Location",
       dataIndex: "from",
     },
     {
       key: "2",
-      title: "To",
+      title: "Destination",
       dataIndex: "to",
     },
     {
@@ -34,7 +35,7 @@ function BusRoutes() {
     },
     {
       key: "6",
-      title: "Cost Per Seat",
+      title: "Amount",
       dataIndex: "cost",
     },
     {
@@ -66,19 +67,19 @@ function BusRoutes() {
     },
   ];
 
-  const onAddBus = () => {
-    const randomNumber = parseInt(Math.random() * 1000);
-    const newBus= {
-      id: randomNumber,
-      busnumber: "QAA " + randomNumber,
-      viacities: "Nairobi - Rwanda ",
-      cost: "$" + randomNumber,
+  // const onAddBus = () => {
+  //   const randomNumber = parseInt(Math.random() * 1000);
+  //   const newBus= {
+  //     id: randomNumber,
+  //     busnumber: "QAA " + randomNumber,
+  //     viacities: "Nairobi - Rwanda ",
+  //     cost: "$" + randomNumber,
    
-    };
-    setDataSource((pre) => {
-      return [...pre, newBus];
-    });
-  };
+  //   };
+  //   setDataSource((pre) => {
+  //     return [...pre, newBus];
+  //   });
+  // };
   const onDeleteBus = (record) => {
     Modal.confirm({
       title: "Are you sure, you want to delete this Bus route?",
@@ -118,7 +119,7 @@ function BusRoutes() {
     <div className="Table">
       <header >
         <h3> ROUTE STATUS</h3>
-        <Button onClick={onAddBus} style={{backgroundColor: 'lightblue'}}>Add Route Details +</Button>
+        <Button style={{backgroundColor: "#fff", color:"#092147"}}> <Link to={"/add-routes"}>Add Routes + </Link></Button>
         <Table columns={columns} dataSource={dataSource}></Table>
         <Modal
           title="Edit Bus"
@@ -141,10 +142,18 @@ function BusRoutes() {
           }}
         >
           <Input
-            value={editingBus?.viacities}
+            value={editingBus?.from}
             onChange={(e) => {
               setEditingBus((pre) => {
-                return { ...pre, viacities: e.target.value };
+                return { ...pre, from: e.target.value };
+              });
+            }}
+          />
+          <Input
+            value={editingBus?.to}
+            onChange={(e) => {
+              setEditingBus((pre) => {
+                return { ...pre, to: e.target.value };
               });
             }}
           />
@@ -156,6 +165,7 @@ function BusRoutes() {
               });
             }}
           />
+       
           <Input
           type = "date"
             value={editingBus?.date}

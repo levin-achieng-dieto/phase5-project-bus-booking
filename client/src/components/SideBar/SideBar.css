@@ -40,22 +40,24 @@
   /* margin-top: 0.1rem; */
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
-  font-weight: 700;
-  font-family: cursive;
+  gap: 2rem;
+  font-weight: 900;
+  font-family: lato;
+  
   
 
 }
 .menuItem {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 1.5rem;
   height: 2.5rem;
   margin-left: 2rem;
   position: relative;
   transition: all 300ms ease;
   border-radius: 0.7rem;
   font-size: 14px;
+
 
 }
 
@@ -81,7 +83,7 @@
   width: 12px;
   height: 100%;
   /* background: var(--pink); */
-  background-color: rgb(66, 67, 68);
+  background-color: #1A488E;
   margin-right: calc(1rem - 8px);
 }
 
@@ -100,7 +102,7 @@
   .sidebar{
     position: fixed;
     z-index: 9;
-    background: #ffe0e0;
+    /* background: #092147; */
     width: 55%;
     padding-right: 1rem;
     height: 100%;

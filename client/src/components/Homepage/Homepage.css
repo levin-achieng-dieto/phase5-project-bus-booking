@@ -20,14 +20,14 @@
 }
 
 .mytext1 {
-    color: rgb(19, 18, 18);
-    text-shadow: 0 0 2px rgba(20, 20, 20, 0.425), 0 0 4px rgba(255, 255, 255, 0.425), 0 0 8px rgba(255, 255, 255, 0.425), 0 0 32px rgba(12, 12, 12, 0.425), 0 0 64px rgba(198, 206, 206, 0.425), 0 0 90px rgba(15, 15, 15, 0.425);
+    color: #092147;
+    text-shadow: 0 0 2px rgba(8, 17, 109, 0.425), 0 0 4px rgba(9, 25, 129, 0.425), 0 0 8px rgba(255, 255, 255, 0.425), 0 0 32px rgba(17, 12, 147, 0.425), 0 0 64px rgba(10, 10, 198, 0.425), 0 0 90px rgba(24, 5, 100, 0.425);
     font-family: fantasy;
     font-size: 50px;
     font-weight: 200;
     letter-spacing: 8px;
     margin-bottom: 20px;
-    background: #0b0b0b6c;
+    background: #fff;
     border-radius: 5px;
     position: relative;
     animation: text 4s infinite;
@@ -61,7 +61,7 @@
     line-height: 60px;
     text-align: center;
     text-transform: uppercase;
-    color: black;
+    color: #fff;
     cursor: pointer;
     text-decoration: none;
     font-family: 'Roboto', sans-serif;
@@ -124,12 +124,11 @@ body {
     background-size: cover;
     background: linear-gradient(
         106.37deg,
-        #e1e5f000 15.63%,
-        #a6a6a6 35.55%,
-        #606060f6 80.85%
-        
+        #fff 6.63%,
+        #97B2DE 30.55%,
+        #092147 90.85%
       );
-      height: 102vh;
+      height: 100vh;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -150,7 +149,7 @@ body {
 }
 
 h1 {
-    color: #333;
+    color: #97B2DE;
     font-family: tahoma;
     font-size: 3rem;
     font-weight: 100;
@@ -166,13 +165,13 @@ h1 span {
     font-size: 30px;
     font-family: fantasy;
     margin-left: 15px;
-    color: black;
+    color: #092147;
 }
 
 .message {
     background-color: rgba(252, 252, 253, 0.062);
     border-radius:5px;
-    color: #333;
+    color: #fff;
     display: block;
     font-weight: 500;
     overflow: hidden;

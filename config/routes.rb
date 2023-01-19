@@ -17,6 +17,7 @@ Rails.application.routes.draw do
   delete '/client-logout', to: 'clients#logout'
 
   post '/buses/addbus', to: 'buses#create'
+  # post '/buses/delete', to: 'buses#destroy'
  
  
  

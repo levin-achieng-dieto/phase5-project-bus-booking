@@ -2,6 +2,7 @@ import React,{ useEffect, useState } from "react";
 import { Button, Table, Modal, Input } from "antd";
 import { EditOutlined, DeleteOutlined } from "@ant-design/icons";
 import { Link } from 'react-router-dom';
+import "./Buses.css"
 
 
 
@@ -59,18 +60,18 @@ function Buses() {
       },
     },
   ];
-  const onAddBus = (event) => {
-    event.preventDefault()
-    const randomNumber = parseInt(Math.random() * 1000);
-    const newBus= {
-      id: randomNumber,
-      busnumber: "QAA " + randomNumber,
+  // const onAddBus = (event) => {
+  //   event.preventDefault()
+  //   const randomNumber = parseInt(Math.random() * 1000);
+  //   const newBus= {
+  //     id: randomNumber,
+  //     busnumber: "QAA " + randomNumber,
    
-    };
-    setDataSource((pre) => {
-      return [...pre, newBus];
-    });
-  };
+  //   };
+  //   setDataSource((pre) => {
+  //     return [...pre, newBus];
+  //   });
+  // };
   const handleDeleteBus = (record) => {
     Modal.confirm({
       title: "Are you sure, you want to delete this Bus?",
@@ -84,7 +85,7 @@ function Buses() {
     });
   };
 
-
+  
 
 
   
@@ -115,10 +116,12 @@ function Buses() {
 
  console.log(dataSource)
     return (
+      <>
+    
         <div className="Table">
         <header >
           <h3> BUS STATUS</h3>
-          <Button onClick={onAddBus} style={{backgroundColor: 'lightgrey', color:"black"}}> <Link to={"/add-bus"}>Add Bus Details + </Link></Button>
+          <Button style={{backgroundColor: 'lightgrey', color:"black"}}> <Link to={"/add-bus"}>Add Bus Details + </Link></Button>
           <Table columns={columns} dataSource={dataSource}></Table>
           <Modal
             title="Edit Bus"
@@ -141,10 +144,26 @@ function Buses() {
             }}
           >
             <Input
-              value={editingBus?.busnumber}
+              value={editingBus?.image}
               onChange={(e) => {
                 setEditingBus((pre) => {
-                  return { ...pre, busnumber: e.target.value };
+                  return { ...pre, image: e.target.value };
+                });
+              }}
+            />
+            <Input
+              value={editingBus?.number_plate}
+              onChange={(e) => {
+                setEditingBus((pre) => {
+                  return { ...pre, number_plate: e.target.value };
+                });
+              }}
+            />
+            <Input
+              value={editingBus?.fleet_no}
+              onChange={(e) => {
+                setEditingBus((pre) => {
+                  return { ...pre, fleet_no: e.target.value };
                 });
               }}
             />
@@ -152,6 +171,7 @@ function Buses() {
           </Modal>
         </header>
       </div>
+      </>
     );
 
 }

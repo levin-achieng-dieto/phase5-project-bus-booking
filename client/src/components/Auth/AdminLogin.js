@@ -2,7 +2,7 @@ import './AdminLogin.css';
 import profile from "./profile.png";
 import email from "./email.jpg";
 import pass from "./pass.png";
-function LoginUi() {
+function Login() {
   return (
     <div className="main">
      <div className="sub-main">
@@ -30,7 +30,7 @@ function LoginUi() {
           </div>
            
             <p className="link">
-              <a href="/sign-in">Forgot password ?</a> Or <a href="/sign-in">Sign Up</a>
+              <a href="/signin">Forgot password ?</a> Or <a href="/pages">Sign Up</a>
             </p>
            
  
@@ -43,4 +43,4 @@ function LoginUi() {
   );
 }
 
-export default LoginUi;
+export default Login;

@@ -1,0 +1,56 @@
+{
+  "name": "svg-path-properties",
+  "version": "1.1.0",
+  "description": "Calculate the length for an SVG path, to use it with node or a Canvas element",
+  "keywords": [
+    "path",
+    "getPointAtLength",
+    "length",
+    "canvas",
+    "svg"
+  ],
+  "homepage": "http://geoexamples.com/path-properties/",
+  "main": "dist/svg-path-properties.cjs.js",
+  "module": "dist/svg-path-properties.esm.js",
+  "unpkg": "dist/svg-path-properties.min.js",
+  "types": "dist/types/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rveciana/svg-path-properties.git"
+  },
+  "scripts": {
+    "type-check": "tsc --noEmit",
+    "type-check:watch": "npm run type-check -- --watch",
+    "build:types": "tsc --emitDeclarationOnly",
+    "build:js": "rollup -c",
+    "build": "npm run build:types && npm run build:js",
+    "test": "ts-node --skip-project node_modules/tape/bin/tape test/**/*-test.ts",
+    "preversion": "npm run build && git add dist && git commit --allow-empty -am \"new version\"",
+    "postpublish": "git push && git push --tags"
+  },
+  "author": {
+    "name": "Roger Veciana i Rovira",
+    "url": "https://geoexamples.com"
+  },
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/core": "^7.11.6",
+    "@babel/plugin-proposal-class-properties": "^7.10.4",
+    "@babel/plugin-proposal-object-rest-spread": "^7.11.0",
+    "@babel/preset-env": "^7.11.5",
+    "@babel/preset-typescript": "^7.10.4",
+    "@types/tape": "^4.13.0",
+    "babel6-plugin-strip-class-callcheck": "^6.0.0",
+    "eslint": "^7.10.0",
+    "prettier": "^2.1.2",
+    "rollup": "^2.28.2",
+    "rollup-plugin-babel": "^4.4.0",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-terser": "^7.0.2",
+    "tape": "^5.0.1",
+    "ts-node": "^9.0.0",
+    "typescript": "^4.0.3"
+  }
+}

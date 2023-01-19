@@ -9,7 +9,7 @@ export default function Homepage() {
        
         <div className="homepage">
             <div className="header-nav">
-                <span className="mytext1">Knight Travel Agencis</span>
+                <span className="mytext1">Knight Travellers</span>
                 
             </div>
 
@@ -27,7 +27,7 @@ export default function Homepage() {
                     </h1>
                 </div>
 
-                <Link to="/login" className="mainBtn">
+                <Link to="/home" className="mainBtn">
                     <svg width="277" height="62">
                         <defs>
                             <linearGradient id="grad1">

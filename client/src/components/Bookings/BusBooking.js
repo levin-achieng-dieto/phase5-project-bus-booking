@@ -85,16 +85,16 @@ function BusBooking() {
       title: "Amount",
       dataIndex: "cost",
     },
-    // {
-    //   key: "4",
-    //   title: "Departure Date",
-    //   dataIndex: "date",
-    // },
-    // {
-    //   key: "5",
-    //   title: "Depature Time",
-    //   dataIndex: "time",
-    // },
+    {
+      key: "4",
+      title: "Departure Date",
+      dataIndex: "date",
+    },
+    {
+      key: "5",
+      title: "Depature Time",
+      dataIndex: "time",
+    },
 
     {
       key: "4",
@@ -166,7 +166,7 @@ function BusBooking() {
         getUserdata();
     },[])
 ]);
-
+console.log(dataSource)
 
 
 

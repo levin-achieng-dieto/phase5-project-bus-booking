@@ -3,7 +3,8 @@ import "./SideBar.css";
 import Logo from "./logo.png";
 import { Link } from "react-router-dom";
 import { AiFillHome } from "react-icons/ai";
-import { UilSignOutAlt, UilSubway, UilUsersAlt, UilMap, UilDialpad, } from "@iconscout/react-unicons";
+import { UilSignOutAlt, UilSubway, UilMap, UilDialpad, } from "@iconscout/react-unicons";
+
 
 const Sidebar = () => {
     const [selected, setSelected] = useState(0);
@@ -33,24 +34,24 @@ const Sidebar = () => {
         heading: "Seats"
       },
   
-      {
+      // {
        
-        path: "/customers",
-        icon: UilUsersAlt,
-        heading: "Customers",
-      },
-      {
+      //   path: "/customers",
+      //   icon: UilUsersAlt,
+      //   heading: "Customers",
+      // },
+      // {
      
-        path: "/bookings",
-        icon: UilUsersAlt,
-        heading: "Bookings",
-      },
-      {
+      //   path: "/bookings",
+      //   icon: UilUsersAlt,
+      //   heading: "Bookings",
+      // },
+      // {
      
-        path: "/payments",
-        icon: UilUsersAlt,
-        heading: "Payment",
-      },
+      //   path: "/payments",
+      //   icon: UilUsersAlt,
+      //   heading: "Payment",
+      // },
     
   ]
   const linkStyle = {
@@ -59,7 +60,7 @@ const Sidebar = () => {
     color: 'black'
   };
   const linkStyle1 = {
-    color: 'black',
+    color: '#092147',
     fontFamily: "fanstasy"
   };
 

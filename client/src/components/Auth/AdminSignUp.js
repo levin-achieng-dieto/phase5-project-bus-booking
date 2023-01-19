@@ -2,10 +2,11 @@ import React from 'react'
 import bgImg from './bus.avif';
 import { useForm } from 'react-hook-form';
 import "./AdminSignUp.css"
+import {Link} from "react-router-dom"
 
 export default function AdminSignUp() {
 
-    const { register, handleSubmit, watch, formState: { errors } } = useForm()
+    const { register, handleSubmit, formState: { errors } } = useForm()
     const onSubmit = data => console.log(data);
 
     // console.log(watch('username'));
@@ -15,7 +16,9 @@ export default function AdminSignUp() {
         <div className="register">
             <div className="col-1">
                 <h2 style={{color:"#092147"}} >Sign In</h2>
-                <span style={{color: "black", fontFamily:"cursive"}}>register and enjoy the service</span>
+                {/* <span style={{color: "black", fontFamily:"cursive"}}>Sign-in and enjoy the service</span> */}
+                <br/>
+                <span style={{color: "blue", fontFamily:"cursive"}}>Register as driver/customer</span>
 
                 <form id='form' className='flex flex-col' onSubmit={handleSubmit(onSubmit)}>
                     <input type="text" {...register("username")} placeholder='username' />
@@ -25,8 +28,9 @@ export default function AdminSignUp() {
                     <input type="text" {...register("email")} placeholder='email' />
                     <input type="text" {...register("password")} placeholder='password' />
                     <input type="text" {...register("confirmpwd")} placeholder='confirm password' />
-                    
+                    <Link to="/login">
                     <button className='btn'>Sign In</button>
+                    </Link>
                 </form>
 
             </div>

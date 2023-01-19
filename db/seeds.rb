@@ -32,6 +32,10 @@ bus1 = Bus.create(image: route1.image, number_plate: route1.busnumber, fleet_no:
 bus2 = Bus.create(image: route2.image, number_plate: route4.busnumber, fleet_no: "09876", route_id: route2.id, driver_id: driver2.id)
 bus3 = Bus.create(image: route3.image, number_plate: route2.busnumber, fleet_no: "37829", route_id: route3.id, driver_id: driver1.id)
 bus4 = Bus.create(image: route4.image, number_plate: route3.busnumber, fleet_no: "78546", route_id: route4.id, driver_id: driver2.id)
+bus5 = Bus.create(image: route1.image, number_plate: route1.busnumber, fleet_no: "12345", route_id: route1.id, driver_id: driver3.id)
+bus6 = Bus.create(image: route2.image, number_plate: route4.busnumber, fleet_no: "09876", route_id: route2.id, driver_id: driver2.id)
+bus7 = Bus.create(image: route3.image, number_plate: route2.busnumber, fleet_no: "37829", route_id: route3.id, driver_id: driver1.id)
+bus8 = Bus.create(image: route4.image, number_plate: route3.busnumber, fleet_no: "78546", route_id: route4.id, driver_id: driver2.id)
 
     # t.string "name"
     # t.string "phonenumber"
