@@ -3,7 +3,7 @@ import styles from "./SortingBar.module.css";
 import Divider from "@material-ui/core/Divider";
 import SecurityIcon from "@material-ui/icons/Security";
 import { useDispatch } from "react-redux";
-import { updateFilterDetails } from "../../../Redux/FilterAndSort/action.js"
+import { updateFilterDetails } from "../../../Redux/FilterAndSort/action";
 
 const SortingBar = () => {
 

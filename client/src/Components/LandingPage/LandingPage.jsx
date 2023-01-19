@@ -1,13 +1,13 @@
 import React from "react";
 import styles from "./LandingPage.module.css";
-import { useNavigate } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { getRoutes } from "../../Redux/routes/action";
 import Modal from "@material-ui/core/Modal";
 import Backdrop from "@material-ui/core/Backdrop";
 import Fade from "@material-ui/core/Fade";
 import { makeStyles } from "@material-ui/core/styles";
-// import RoutesModal from "./RoutesModal";
+import RoutesModal from "./RoutesModal";
 
 const useStyles = makeStyles((theme) => ({
   modal: {
@@ -50,7 +50,7 @@ const LandingPage = () => {
     ["Lodwar", "Nairobi", 5],
     ["Nairobi", "Lodwar", 5],
   ];
-  const history = useNavigate();
+  const history = useHistory();
   const [departure, setDeparture] = React.useState("");
   const [arrival, setArrival] = React.useState("");
   const [date, setDate] = React.useState("");
@@ -248,7 +248,7 @@ const LandingPage = () => {
           <Fade in={openModal}>
             <div className={classes.paper}>
               <p id="transition-modal-description">
-                {/* <RoutesModal /> */}
+                <RoutesModal />
               </p>
             </div>
           </Fade>

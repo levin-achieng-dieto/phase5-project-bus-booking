@@ -1,10 +1,10 @@
 import React from "react";
 import styles from "./Right.module.css";
-import { BusBox } from "../BusBox/BusBox";
-import { SortingBar } from "../../BusDetails/SortingBar/SortingBar";
+import { BusBox } from "../BusDetails/BusBox/BusBox";
+import { SortingBar } from "../BusDetails/SortingBar/SortingBar";
 import { useLocation } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
-import { getBusDetails } from "../../../Redux/BookBus/action";
+import { getBusDetails } from "../../Redux/BookBus/action";
 
 const Right = () => {
   let { search } = useLocation();
