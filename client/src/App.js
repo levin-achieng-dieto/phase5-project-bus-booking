@@ -1,24 +1,29 @@
-import logo from './logo.svg';
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import 'bootstrap/dist/css/bootstrap.min.css'
+import Homepage from './components/Homepage/Homepage'
+// import RouteSelection from './components/RouteSelection/RouteSelection'
+// import LogOrsign from './components/Login-Signup/LogOrsign'
+// import Signup from './components/Login-Signup/Signup'
+// import Profile from './components/Profile/Profile'
+// import TicketPage from './components/TicketPage/TicketPage'
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Router>
+        <Routes>
+          <Route path="/" element={ <Homepage/> } />
+          {/* <Route path="/login" render={props => <LogOrsign {...props} />} />
+          <Route path="/register" render={props => <Signup {...props} />} />
+          <Route path="/routes" exact render={props => <RouteSelection {...props} />} />
+          <Route path="/profile" exact render={props => <Profile {...props} />} />
+          <Route path="/getTicket" exact render={props => <TicketPage {...props} />} /> */}
+        </Routes>
+      </Router>
     </div>
+
   );
 }
 
