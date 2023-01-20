@@ -1,11 +1,13 @@
 import React from 'react';
 import './Homepage.css';
 import {Link} from "react-router-dom"
+// import Navbar from './Navbar';
 
 export default function Homepage() {
    
     
     return (
+       <div>
        
         <div className="homepage">
             <div className="header-nav">
@@ -37,10 +39,11 @@ export default function Homepage() {
                         </defs>
                         <rect x="5" y="5" rx="25" fill="none" stroke="url(#grad1)" width="266" height="50"></rect>
                     </svg>
-                    <span>Get Started</span> 
+                    <span>Get Started as Admin</span> 
                 </Link>
-                
+            
             </div>
+        </div>
         </div>
         
     )

@@ -30,7 +30,7 @@ function Login() {
           </div>
            
             <p className="link">
-              <a href="/signin">Forgot password ?</a> Or <a href="/pages">Sign Up</a>
+              <a href="/signin">Forgot password ?</a> Or <a href="/home">Sign Up</a>
             </p>
            
  

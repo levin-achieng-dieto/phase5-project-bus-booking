@@ -28,7 +28,7 @@ export default function AdminSignUp() {
                     <input type="text" {...register("email")} placeholder='email' />
                     <input type="text" {...register("password")} placeholder='password' />
                     <input type="text" {...register("confirmpwd")} placeholder='confirm password' />
-                    <Link to="/login">
+                    <Link to="/home">
                     <button className='btn'>Sign In</button>
                     </Link>
                 </form>

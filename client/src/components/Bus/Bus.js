@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import axios from "axios";
 import { Link } from 'react-router-dom';
 import "./Bus.css"
 const Bus = () => {
@@ -17,15 +16,35 @@ const Bus = () => {
     }
 
   
-    function deleteBus(id) {
-        axios.delete(`buses/${id}`).then(products());
-      }
   
+    const handleDelete = async (id) => {
+        const response = await fetch(`/buses/${id}`, {
+          method: 'DELETE',
+          headers: {
+            'Content-Type': 'application/json'
+          }
+        });
+        const data = await response.json();
+        console.log(data);
+      }
+      
+      const handleEdit = async (id, updatedData) => {
+        const response = await fetch(`buses/${id}`, {
+          method: 'PATCH',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(updatedData)
+        });
+        const data = await response.json();
+        console.log(data);
+      }
+      
 
     return (
         <div className="product-list" >
             <button>
-            <Link to={"/add-bus"}>Add Bus+</Link>
+            <Link to={"/bus/new"}>Add Bus+</Link>
             </button>
             {/* <button style={{backgroundColor:"black" ,color:"white",  margin:"5px"}} >Add Bus+</button> */}
 
@@ -46,14 +65,8 @@ const Bus = () => {
                          <li><img style ={{ width: "70px",height:" 30px"}}src={item.image} alt={item.number_plate} /> </li>
                         <li>{item.number_plate}</li>
                         <li>{item.fleet_no}</li>
-                       
-                      
-                        <li>
-                            <button style={{color:"blue"}} >Edit </button>
-                            <button style={{color:"red"}} onClick={() => deleteBus(item.id)}>Delete</button>
-                            
-                            </li>
-
+                            <button style={{color:"blue"}} onClick={() =>handleEdit(item.id, {image: "new image", number_plate: "new number_plate", fleet_no: "new fleet_no"})} >Edit </button>
+                            <button style={{color:"red"}} onClick={() =>handleDelete(item.id)}>Delete</button>
                     </ul>
                 )
                 :<h1>No Result Found</h1>

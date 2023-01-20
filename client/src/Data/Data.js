@@ -16,7 +16,7 @@ export const cardsData = [
         backGround: "linear-gradient(180deg, #bb67ff 0%, #c484f3 100%)",
         boxShadow: "0px 10px 20px 0px #788097",
       },
-      barValue: 20,
+      barValue: 0,
       value:"12,000",
       png: UilDialpad,
       series: [
@@ -38,7 +38,7 @@ export const cardsData = [
       series: [
         {
           name: "Buses",
-          data: [10, 8, 6, 4, 2 , 6, 2],
+          data: [5, 5, 5, 5, 5 , 5, 5],
         },
       ],
     },
@@ -49,7 +49,7 @@ export const cardsData = [
           "linear-gradient(rgb(248, 212, 154) -146.42%, rgb(255 202 113) -46.42%)",
         boxShadow: "0px 10px 20px 0px #788097",
       },
-      barValue: 20,
+      barValue: 0,
       value: "4,270",
       png: UilUsersAlt,
       series: [
@@ -67,7 +67,7 @@ export const cardsData = [
         // boxShadow: "0px 19px 60px rgba(62, 14, 153, 0.08)"
         
       },
-      barValue: 20,
+      barValue: 0,
       value: "4,270",
       png: UilUsersAlt,
       series: [

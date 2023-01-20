@@ -13,8 +13,9 @@
 .product-list ul li {
   display: inline-block;
   width: 150px;
+  height: 60px;
   border: 1px solid skyblue;
-  padding: 5px;
+  padding: 15px;
 }
 
 .product-list ul{

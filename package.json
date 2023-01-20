@@ -4,6 +4,7 @@
     "@material-ui/icons": "^4.11.3",
     "@mui/material": "^5.1.1",
     "@mui/utils": "^5.1.1",
+    "bootstrap": "^5.2.3",
     "enquire-js": "^0.1.0",
     "framer-motion": "^8.0.2",
     "rc-queue-anim": "^2.0.0",

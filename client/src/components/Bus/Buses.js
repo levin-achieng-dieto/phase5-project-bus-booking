@@ -6,7 +6,7 @@ import "./Buses.css"
 
 
 
-function Buses() {
+function Busess() {
 
  const [isEditing, setIsEditing] = useState(false);
  const [editingBus, setEditingBus] = useState(null);
@@ -176,4 +176,4 @@ function Buses() {
 
 }
   
-export default Buses;
+export default Busess;

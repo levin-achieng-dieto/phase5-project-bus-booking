@@ -5,38 +5,6 @@
     margin: 0;
 }
 
-body{
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    background: linear-gradient(
-        106.37deg,
-        #fff 6.63%,
-        #97B2DE 30.55%,
-        #092147 90.85%
-        
-      );
-      height: 102vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family: 'Inter', sans-serif;
-      
-      
-    }
-    
-    .AppGlass {
-      display: grid;
-      height: 100%;
-      width: 100%;
-      background: var(--glass);
-      border-radius: 2rem;
-      gap: 100px;
-      grid-template-columns: 15rem auto 5rem;
-      overflow: hidden;
-
-  
-}
 
 .App {
   height: 100vh;
@@ -47,7 +15,7 @@ body{
 }
 
 .register{
-  max-width: 978px;
+  max-width: 100px;
   width: 100vw;
   display:flex;
   border: 1px solid #e9ecef;

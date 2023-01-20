@@ -7,6 +7,7 @@
     transform: translate(-50%, -9%);
     width: 100%;
     z-index: 1000;
+    
    
 }
 
@@ -20,8 +21,8 @@
 }
 
 .mytext1 {
-    color: #092147;
-    text-shadow: 0 0 2px rgba(8, 17, 109, 0.425), 0 0 4px rgba(9, 25, 129, 0.425), 0 0 8px rgba(255, 255, 255, 0.425), 0 0 32px rgba(17, 12, 147, 0.425), 0 0 64px rgba(10, 10, 198, 0.425), 0 0 90px rgba(24, 5, 100, 0.425);
+    color: #829D93;
+    text-shadow: 0 0 2px rgba(3, 55, 2, 0.425), 0 0 4px rgba(7, 106, 32, 0.425), 0 0 8px rgba(4, 96, 18, 0.425), 0 0 32px rgba(3, 121, 32, 0.425), 0 0 64px rgba(14, 111, 5, 0.425), 0 0 90px rgba(16, 132, 10, 0.425);
     font-family: fantasy;
     font-size: 50px;
     font-weight: 200;
@@ -35,7 +36,7 @@
 
 @keyframes text {
     0% {
-        color: white;
+        color: black;
         margin-bottom: -40px;
     }
     30% {
@@ -52,7 +53,7 @@
 .mainBtn {
     position: relative;
     left: 80%;
-    margin-top: 45%;
+    margin-top: 30%;
     display: inline-block;
     width: 277px;
     height: 50px;
@@ -61,7 +62,7 @@
     line-height: 60px;
     text-align: center;
     text-transform: uppercase;
-    color: #fff;
+    color: #505D58;
     cursor: pointer;
     text-decoration: none;
     font-family: 'Roboto', sans-serif;
@@ -112,44 +113,23 @@
     box-sizing: border-box;
 }
 
-body {
+ /* body {
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100vh;
-    width: 100vw;
-    /* background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0KPs0gUvE4NDVhUFy2gnTTP8EWBMm-VDRkQ&usqp=CAU'); */
-    background-repeat: no-repeat;
+    width: 100vw; 
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0KPs0gUvE4NDVhUFy2gnTTP8EWBMm-VDRkQ&usqp=CAU'); 
+     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
-    background: linear-gradient(
-        106.37deg,
-        #fff 6.63%,
-        #97B2DE 30.55%,
-        #092147 90.85%
-      );
-      height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family: 'Inter', sans-serif;
-      
-      
-    }
+   
     
-    .AppGlass {
-      display: grid;
-      height: 100%;
-      width: 100%;
-      background: var(--glass);
-      border-radius: 2rem;
-      gap: 100px;
-      grid-template-columns: 15rem auto 5rem;
-      overflow: hidden;
-}
+ 
+}  */
 
 h1 {
-    color: #97B2DE;
+    color: black;
     font-family: tahoma;
     font-size: 3rem;
     font-weight: 100;
@@ -165,13 +145,13 @@ h1 span {
     font-size: 30px;
     font-family: fantasy;
     margin-left: 15px;
-    color: #092147;
+    color: black;
 }
 
 .message {
-    background-color: rgba(252, 252, 253, 0.062);
+    background-color: rgba(1, 1, 12, 0.062);
     border-radius:5px;
-    color: #fff;
+    color: black;
     display: block;
     font-weight: 500;
     overflow: hidden;

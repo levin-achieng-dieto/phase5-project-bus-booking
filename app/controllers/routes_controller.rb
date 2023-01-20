@@ -7,7 +7,7 @@ rescue_from ActiveRecord::RecordInvalid, with:  :rescue_from_invalid_record
     end
 
     def create
-        route = admin.route.create!(route_params)
+        route = Route.create!(route_params)
         render json: route, status: :created
     end
 
@@ -30,7 +30,7 @@ rescue_from ActiveRecord::RecordInvalid, with:  :rescue_from_invalid_record
 
     private
     def route_params
-        params.permit(:from, :to, :image, :busnumber, :date, :time, :cost)
+        params.permit(:from, :to, :image, :busnumber, :date, :time, :cost, :admin_id)
     end
 
     def rescue_from_not_found_record

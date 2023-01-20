@@ -1,68 +1,122 @@
-import React, { useState } from 'react';
-import {  Link } from 'react-router-dom';
-import { Button,Input } from "antd";
+import React,{useState} from 'react'
+import {Link} from "react-router-dom"
+const initialState ={
 
-function AddRoutes() {
-  const [from, setFrom] = useState('');
-  const [to, setTo] = useState('');
-  const [busnumber, setBusnumber] = useState('');
-  const [date, setDate] = useState('');
-  const [cost, setCost] = useState('');
-  const [time, setTime] = useState('');
+  from:"",
+  to:"",
+  busnumber:"",
+  date:"",
+  time:"",
+  cost:"",
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    fetch('/routes', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({from,to,busnumber,date,cost,time })
-      })
-        .then(response => response.json())
-        .then(data => {
-          console.log(data);
-        })
-        .catch(error => console.log(error));
-    };
+  }
+
+
+function AddRoutes ({onAddRoute}) {
+ const [formData, setFormData]=useState(initialState);
+
+const handleOnChange =(e) => {
+const { name,value}=e.target;
+setFormData(formData=>{
+  return {
+...formData, 
+[name]:value
+
+  }
   
+})
 
-  return (
-    <>
-    <Button  style ={{borderColor: "#092147", backgroundColor:"lightblue"}} >
-    <Link to={"/routes"}>Back</Link>
-    </Button>
-     <h4 style={{color:"#092147"}} >Add Bus Routes</h4>
-    <form id='form' className='flex flex-col'  onSubmit={handleSubmit}>
-      <label>
-        Location:
-        <Input type="text" value={from} onChange={e => setFrom(e.target.value)} />
-      </label>
-      <label>
-        Destination:
-        <Input type="email" value={to} onChange={e => setTo(e.target.value)} />
-      </label>
-      <label>
-        Bus:
-        <Input type="busnumber" value={busnumber} onChange={e => setBusnumber(e.target.value)} />
-      </label>
-      <label>
-        Date:
-        <Input type="date" value={date} onChange={e => setDate(e.target.value)} />
-      </label>
-      <label>
-        Amount:
-        <Input type="cost" value={cost} onChange={e => setCost(e.target.value)} />
-      </label>
-      <label>
-        Time:
-        <Input type="time" value={time} onChange={e => setTime(e.target.value)} />
-      </label>
-      <Button style ={{borderColor: "#092147", backgroundColor:"lightblue"}} type="submit">Submit</Button>
-    </form>
-  
-    </>
-  );
+}
+const handleSubmit=(e)=>{
+  e.preventDefault();
+fetch("http://localhost:3000/Books",{
+  method:'POST',
+  headers:{
+    'content-Type':'application/json'
+  },
+  body:JSON.stringify(formData)
+})
+.then((response)=>response.json())
+.then((newRoute)=>{console.log(newRoute)
+  onAddRoute(newRoute);
+});
+  setFormData(initialState)
 }
 
-export default AddRoutes;
+
+  return (
+    <div>
+      <form  className='form' autoComplete='off'
+      onSubmit={handleSubmit} >
+       <button>
+      <Link to={"/routes"}>Back</Link>
+      </button>
+      <h3>New Route +</h3>
+      <label htmlFor="from">Pick-Up</label>
+       <input 
+       type="text"
+        id="from" 
+        name="from"
+        onChange={handleOnChange}
+        value={formData.from}
+        />
+
+      <label htmlFor="to">Destionation</label>
+       <input 
+       type="text" 
+       id="to" 
+       name="to"
+       onChange={handleOnChange}
+       value={formData.to}
+       />
+
+
+       <lable htmlFor='busnumber'>Bus</lable>
+        <input 
+        type="text" 
+        id="busnumber" 
+        name="busnumber"
+        onChange={handleOnChange}
+        value={formData.busnumber}
+        />
+
+        <label htmlFor="date">Date</label>
+       <input 
+       type="date" 
+       id="date" 
+       name="date"
+       onChange={handleOnChange}
+       value={formData.date}
+       
+       />
+
+        <label htmlFor="time">Time</label>
+       <input 
+       type="time" 
+       id="time" 
+       name="time"
+       onChange={handleOnChange}
+       value={formData.time}
+       
+       />
+
+        <label htmlFor="cost">Amount</label>
+       <input 
+       type="text" 
+       id="cost" 
+       name="cost"
+       onChange={handleOnChange}
+       value={formData.cost}
+       
+       />
+       
+
+        <button style={{color: "darkkhaki"}} type="submit" >Submit</button>
+      </form>
+        
+
+    </div>
+  )
+}
+
+export default AddRoutes
