@@ -6,14 +6,12 @@ import { useNavigate } from "react-router-dom"
 
 function AdminSignUp({setAdminUser}) {
 
-    // const { register, handleSubmit, formState: { errors } } = useForm()
-    // const onSubmit = data => console.log(data);
-    const navigate = useNavigate()
+    const navigate = useNavigate();
     const [username, setUsername] = useState("")
     const [mobile, setMobile] = useState("")
-    const [username, setUsername] = useState("")
-    const [username, setUsername] = useState("")
-
+    const [email, setEmail] = useState("")
+    const [password, setPassword] = useState("")
+    const [passwordConfirmation, setPasswordConfirmation] = useState("")
 
     function handleSubmit(e){
         e.preventDefault();
@@ -33,7 +31,7 @@ function AdminSignUp({setAdminUser}) {
             if (r.ok) {
                 r.json().then((user) => setAdminUser(user))
             }
-            navigate("/customer-page")
+            navigate("/")
         });
     }
     
