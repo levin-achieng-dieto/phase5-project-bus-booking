@@ -10,8 +10,8 @@ import Header from "./Header";
 import RouteList from '../busesRoutes/RouteList';
 import RouteAdd from '../busesRoutes/RouteAdd';
 import RouteEdit from '../busesRoutes/RouteEdit';
-// import Homepage from '../components/Homepage/Homepage';
-import Navbar from '../components/Homepage/Navbar';
+import Homepage from '../components/Homepage/Homepage';
+
 
 
 // import AdminLogin from '../components/Auth/AdminLogin';
@@ -25,7 +25,7 @@ function App() {
     <Routes >
           {/* <Route exact path ='/signin' element ={<AdminSignUp/>}></Route>  */}
 
-      <Route  exact path ='/' element ={<Navbar/>}></Route>
+      <Route  exact path ='/' element ={<Homepage/>}></Route>
       <Route  path ='/home' element ={<Cards/>}></Route>
        <Route  path ='/bookings' element ={<Bookings/>}></Route> 
         <Route  path= "/bus" element ={<BusList />}></Route>   

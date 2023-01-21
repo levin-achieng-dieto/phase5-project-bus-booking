@@ -29,7 +29,7 @@ export default function Homepage() {
                     </h1>
                 </div>
 
-                <Link to="/home" className="mainBtn">
+                <Link to="/customer-page" className="mainBtn">
                     <svg width="277" height="62">
                         <defs>
                             <linearGradient id="grad1">
