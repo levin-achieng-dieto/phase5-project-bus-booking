@@ -2,7 +2,7 @@ import React from 'react'
 import Cards from '../components/Cards/Cards';
 import "./MainDash.css";
 // import BusTable from '../components/Table/BusTable';
-import {Routes,Route} from "react-router-dom"
+import {Routes,Route,Link} from "react-router-dom"
 import BusRoutes from '../components/Routes/BusRoutes';
 // import Bus from '../components/Bus/Bus';
 import Buses from '../components/Bus/Buses';
@@ -27,28 +27,28 @@ function MainDash() {
   return (
     <div className="MainDash">
       <Routes>
-      <Route exact path ='/' element ={<Cards/>}></Route> 
-      {/* <Route path='/seats' element={<><SeatSelection /> <Footer /></>} />
-      <Route path='/bookings' element={<><BusBooking/> <Footer /></>} />  */}
-   
-      {/* <Route exact path= "/buses" element ={<Bus/>}></Route>  */}
-      <Route exact path= "/buses" element ={<Buses/>}></Route> 
+        <Route exact path ='/' element ={<Cards/>}></Route> 
+        {/* <Route path='/seats' element={<><SeatSelection /> <Footer /></>} />
+        <Route path='/bookings' element={<><BusBooking/> <Footer /></>} />  */}
+    
+        {/* <Route exact path= "/buses" element ={<Bus/>}></Route>  */}
+        <Route exact path= "/buses" element ={<Buses/>}></Route> 
+        
+        <Route  exact path= "/routes" element ={<BusRoutes/>}></Route> 
+        {/* <Route exact path= "/customers" element ={<Customers/>}></Route>  */}
+        <Route exact path= "/customers" element ={<User/>}></Route> 
+        <Route exact path= "/bookings" element ={<BusBooking/>}></Route>
+        <Route exact path= "/add-bus" element ={<AddBus/>}></Route>
+        <Route exact path= "/add-customer" element ={<AddUser/>}></Route>
+    
+        <Route exact path= "/seats-details" element ={<SeatSelection/>}></Route> 
+        <Route exact path= "/seats" element ={<Booking/>}></Route>
+        <Route exact path= "/payments" element ={<Payment/>}></Route>
+        <Route exact path= "/ticket" element ={<Ticket/>}></Route>
+        <Route exact path= "/login" element ={<AdminLogin/>}></Route>
       
-       <Route  exact path= "/routes" element ={<BusRoutes/>}></Route> 
-       {/* <Route exact path= "/customers" element ={<Customers/>}></Route>  */}
-       <Route exact path= "/customers" element ={<User/>}></Route> 
-      <Route exact path= "/bookings" element ={<BusBooking/>}></Route>
-      <Route exact path= "/add-bus" element ={<AddBus/>}></Route>
-      <Route exact path= "/add-customer" element ={<AddUser/>}></Route>
-  
-      <Route exact path= "/seats-details" element ={<SeatSelection/>}></Route> 
-      <Route exact path= "/seats" element ={<Booking/>}></Route>
-      <Route exact path= "/payments" element ={<Payment/>}></Route>
-      <Route exact path= "/ticket" element ={<Ticket/>}></Route>
-      <Route exact path= "/login" element ={<AdminLogin/>}></Route>
-      
-  
       </Routes>
+      
   </div>
 
   )

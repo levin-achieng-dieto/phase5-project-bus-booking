@@ -9,14 +9,13 @@ import MainDash from './MainDash/MainDash';
 function Layout() {
   return (
     <>
-    <div className="App">
-      <div className="AppGlass">
-      <Sidebar/>
-      <MainDash/>
+      <div className="App">
+        <div className="AppGlass">
+          <Sidebar/>
+          <MainDash/>
+        </div>
       </div>
-      </div>
-   
-      </>
+    </>
   );
 }
 
