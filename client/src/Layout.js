@@ -8,15 +8,14 @@ import MainDash from './MainDash/MainDash';
 function Layout() {
   console.log("loyal")
   return (
-   
-    <div className="App">
-      <div className="AppGlass">
-      <Sidebar/>
-      <MainDash/>
+    <>
+      <div className="App">
+        <div className="AppGlass">
+          <Sidebar/>
+          <MainDash/>
+        </div>
       </div>
-      </div>
-   
-  
+    </>
   );
 }
 

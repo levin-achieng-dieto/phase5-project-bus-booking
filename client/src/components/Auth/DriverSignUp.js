@@ -4,14 +4,18 @@ import bgImg from './bus.avif';
 import "./AdminSignUp.css"
 import { useNavigate } from "react-router-dom"
 
-function AdminSignUp({setAdminUser}) {
+function DriverSignUp({setDriveruser}) {
 
-    const { register, handleSubmit, formState: { errors } } = useForm()
-    const onSubmit = data => console.log(data);
+    const navigate = useNavigate();
+    const [username, setUsername] = useState("")
+    const [mobile, setMobile] = useState("")
+    const [email, setEmail] = useState("")
+    const [password, setPassword] = useState("")
+    const [passwordConfirmation, setPasswordConfirmation] = useState("")
 
     function handleSubmit(e){
         e.preventDefault();
-        fetch("/admin-signup", {
+        fetch("/driver-signup", {
             mathod: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -25,9 +29,9 @@ function AdminSignUp({setAdminUser}) {
             })
         }).then((r) => {
             if (r.ok) {
-                r.json().then((user) => setAdminUser(user))
+                r.json().then((user) => setDriveruser(user))
             }
-            navigate("/")
+            navigate("/layout")
         });
     }
     
@@ -35,7 +39,7 @@ function AdminSignUp({setAdminUser}) {
     <section>
         <div className="register">
             <div className="col-1">
-                <h2 style={{color:"#092147"}} >Admin Sign Up</h2>
+                <h2 style={{color:"#092147"}} >Driver Sign Up</h2>
                 <span style={{color: "black", fontFamily:"cursive"}}>register and enjoy the service</span>
 
                 <form onSubmit={handleSubmit}  id='form' className='flex flex-col'>
@@ -57,4 +61,4 @@ function AdminSignUp({setAdminUser}) {
   )
 }
 
-export default AdminSignUp
+export default DriverSignUp

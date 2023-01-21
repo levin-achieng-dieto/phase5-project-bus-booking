@@ -7,27 +7,27 @@ class AdminsController < ApplicationController
         render json: Admin.all, status: :ok
     end
 
-    def show
-        admin = Admin.find_by(id: params[:id])
-        render json: admin, status: :ok
-    end
+    # def show
+    #     admin = Admin.find_by(id: params[:id])
+    #     render json: admin, status: :ok
+    # end
 
-    def create
-        admin = Admin.create!(admin_params)
-        render json: admin, status: :created
-    end
+    # def create
+    #     admin = Admin.create!(admin_params)
+    #     render json: admin, status: :created
+    # end
 
-    def update
-        admin = Admin.find_by(id: params[:id])
-        admin.update!(admin_params)
-        render json: admin, status: :updated
-    end
+    # def update
+    #     admin = Admin.find_by(id: params[:id])
+    #     admin.update!(admin_params)
+    #     render json: admin, status: :updated
+    # end
 
-    def destroy
-        admin = Admin.find(params[:id])
-        admin.destroy
-        head :no_content
-    end
+    # def destroy
+    #     admin = Admin.find(params[:id])
+    #     admin.destroy
+    #     head :no_content
+    # end
 
     def me
         admin = Admin.find(session[:admin_id])

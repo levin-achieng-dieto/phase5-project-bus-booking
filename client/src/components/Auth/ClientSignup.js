@@ -4,30 +4,34 @@ import bgImg from './bus.avif';
 import "./AdminSignUp.css"
 import { useNavigate } from "react-router-dom"
 
-function AdminSignUp({setAdminUser}) {
+function ClientSignUp({setClientUser}) {
 
-    const { register, handleSubmit, formState: { errors } } = useForm()
-    const onSubmit = data => console.log(data);
+    const navigate = useNavigate();
+    const [username, setUsername] = useState("")
+    const [address, setAddress] = useState("")
+    const [email, setEmail] = useState("")
+    const [password, setPassword] = useState("")
+    const [passwordConfirmation, setPasswordConfirmation] = useState("")
 
     function handleSubmit(e){
         e.preventDefault();
-        fetch("/admin-signup", {
+        fetch("/client-signup", {
             mathod: "POST",
             headers: {
                 "Content-Type": "application/json"
             },
             body: JSON.stringify({
                 username,
-                mobile,
+                address,
                 email,
                 password,
                 password_confirmation: passwordConfirmation
             })
         }).then((r) => {
             if (r.ok) {
-                r.json().then((user) => setAdminUser(user))
+                r.json().then((user) => setClientUser(user))
             }
-            navigate("/")
+            navigate("/layout")
         });
     }
     
@@ -35,12 +39,12 @@ function AdminSignUp({setAdminUser}) {
     <section>
         <div className="register">
             <div className="col-1">
-                <h2 style={{color:"#092147"}} >Admin Sign Up</h2>
+                <h2 style={{color:"#092147"}} >Client Sign Up</h2>
                 <span style={{color: "black", fontFamily:"cursive"}}>register and enjoy the service</span>
 
                 <form onSubmit={handleSubmit}  id='form' className='flex flex-col'>
                     <input type="text" placeholder='username' required autoComplete='off' value={username} onChange={(e) => setUsername(e.target.value)} />
-                    <input type="text" placeholder='mobile number' required autoComplete='off' value={mobile} onChange={(e) => setMobile(e.target.value)} />
+                    <input type="text" placeholder='address' required autoComplete='off' value={address} onChange={(e) => setAddress(e.target.value)} />
                     <input type="text" placeholder='email' required autoComplete='off' value={email} onChange={(e) => setEmail(e.target.value)} />
                     <input type="text" placeholder='password' id='password_confirmation' name='password_confirmation' required autoComplete='current-password' value={password} onChange={(e) => setPassword(e.target.value)}/>
                     <input type="text" placeholder='confirm password' id='password' name='password' required autoComplete='current-password' value={passwordConfirmation} onChange={(e) => setPasswordConfirmation(e.target.value)}/>
@@ -57,4 +61,4 @@ function AdminSignUp({setAdminUser}) {
   )
 }
 
-export default AdminSignUp
+export default ClientSignUp
