@@ -3,9 +3,6 @@ import './AdminLogin.css';
 import profile from "./profile.png";
 import email from "./email.jpg";
 import pass from "./pass.png";
-<<<<<<< HEAD
-function Login() {
-=======
 import { useNavigate, Link } from "react-router-dom"
 
 
@@ -34,7 +31,6 @@ function LoginUi({adminUser}) {
 
 
 
->>>>>>> c7e146dd (changes made)
   return (
     <div className="main">
       <div className="sub-main">

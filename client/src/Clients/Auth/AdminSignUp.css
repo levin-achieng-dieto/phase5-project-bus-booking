@@ -5,6 +5,38 @@
     margin: 0;
 }
 
+body{
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background: linear-gradient(
+        106.37deg,
+      #ced8e8 6.63%,
+      #fff 30.55%,
+      #ced8e8 95%
+        
+      );
+      height: 102vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Inter', sans-serif;
+      
+      
+    }
+    
+    .AppGlass {
+      display: grid;
+      height: 100%;
+      width: 100%;
+      background: var(--glass);
+      border-radius: 2rem;
+      gap: 100px;
+      grid-template-columns: 15rem auto 5rem;
+      overflow: hidden;
+
+  
+}
 
 .App {
   height: 100vh;
@@ -15,7 +47,7 @@
 }
 
 .register{
-  max-width: 100px;
+  max-width: 978px;
   width: 100vw;
   display:flex;
   border: 1px solid #e9ecef;
@@ -31,7 +63,7 @@
 #form{
   max-width: 320px;
   width: 100vw;
-  margin: 2em auto;
+  margin: 1em auto;
 }
 
 #form >  input, .btn{

@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import bgImg from './bus.avif';
 //import { useForm } from 'react-hook-form';
 import "./AdminSignUp.css"
-import { useNavigate } from "react-router-dom"
+import { useNavigate, Link } from "react-router-dom"
 
 function AdminSignUp({setAdminUser}) {
 
@@ -31,7 +31,7 @@ function AdminSignUp({setAdminUser}) {
             if (r.ok) {
                 r.json().then((user) => setAdminUser(user))
             }
-            navigate("/")
+            navigate("/customer-page")
         });
     }
     
@@ -49,7 +49,12 @@ function AdminSignUp({setAdminUser}) {
                     <input type="text" placeholder='password' id='password_confirmation' name='password_confirmation' required autoComplete='current-password' value={password} onChange={(e) => setPassword(e.target.value)}/>
                     <input type="text" placeholder='confirm password' id='password' name='password' required autoComplete='current-password' value={passwordConfirmation} onChange={(e) => setPasswordConfirmation(e.target.value)}/>
                     <div>
-                        <button type='submit' className='btn'>Sign Up</button>
+                        <Link to="/customer-page" >
+                            <button type='submit' className='btn'>Sign Up</button>
+                        </Link>
+                        <Link to="/adminlogin" >
+                            <button type='submit' className='btn'>Login</button>
+                        </Link>
                     </div>
                 </form>
             </div>
