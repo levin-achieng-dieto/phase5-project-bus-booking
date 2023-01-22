@@ -39,7 +39,20 @@ export default function Homepage() {
                         </defs>
                         <rect x="5" y="5" rx="25" fill="none" stroke="url(#grad1)" width="266" height="50"></rect>
                     </svg>
-                  <span>Register</span> 
+                  <span>Admin</span> 
+                
+                </Link>
+                <Link to="/home" className="mainBtn">
+                    <svg width="277" height="62">
+                        <defs>
+                            <linearGradient id="grad1">
+                                <stop offset="0%" stopColor="black" />
+                                <stop offset="100%" stopColor="black" />
+                            </linearGradient>
+                        </defs>
+                        <rect x="5" y="5" rx="25" fill="none" stroke="url(#grad1)" width="266" height="50"></rect>
+                    </svg>
+                  <span>Client</span> 
                 
                 </Link>
             
