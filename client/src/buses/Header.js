@@ -12,17 +12,17 @@ import {Link} from "react-router-dom"
         
       <div className='navigation'>
 
-      <Link to="/home">
+      <Link to="/admin/home">
       <button style={{color: "black"}} className='btn'>DashBoard</button>
       </Link>
-      <Link to="/bus">
+      <Link to="/admin/bus">
       <button  style={{color: "black"}} className='btn'>Buses</button>
       </Link>
-      <Link to="/routes">
+      <Link to="/admin/routes">
       <button  style={{color: "black"}} className='btn'>Routes</button>
       </Link>
     
-      <Link to="/bookings">
+      <Link to="/admin/bookings">
       <button  style={{color: "black"}} className='btn'>Bookings</button>
       </Link>
 

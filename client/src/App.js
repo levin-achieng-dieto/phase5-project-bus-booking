@@ -1,18 +1,21 @@
 import React from "react";
 
-import { Routes, Route, BrowserRouter as Router } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
+import HomeApp from './Clients/HomeApp';
+import "./Clients/index.css"
+import BusApp from "./buses/BusApp";
+import "./buses/index.css"
+import Header from "./buses/Header";
+import Home from "./Clients/Home";
 
-// import Homepage from "./components/Homepage/Homepage";
-// import AdminLogin from './components/Auth/AdminLogin';
-// import AdminSignUp from "./components/Auth/AdminSignUp"
 
 function App() {
   return (
-    <Router>
-      <Routes>
-      
-      </Routes>
-    </Router>
+      <>
+      {localStorage.getItem("userAdmin")? <Header /> : <Home />}
+      <HomeApp/>
+       <BusApp/>
+    </>
   );
 }
 

@@ -1,9 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import HomeApp from './Clients/HomeApp';
-import "./Clients/index.css"
-// import App from "./buses/App";
-// import "./buses/index.css"
+import App from "./App"
 
 import { BrowserRouter  } from "react-router-dom";
 
@@ -11,8 +8,8 @@ import { BrowserRouter  } from "react-router-dom";
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
-    <HomeApp/>
-    {/* <App/> */}
+    
+    <App/>
     </BrowserRouter>
    
     </React.StrictMode>,

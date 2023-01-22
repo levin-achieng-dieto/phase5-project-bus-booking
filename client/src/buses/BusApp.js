@@ -17,29 +17,28 @@ import Homepage from '../components/Homepage/Homepage';
 // import AdminLogin from '../components/Auth/AdminLogin';
 // import AdminSignUp from "../components/Auth/AdminSignUp"
 
-function App() {
+function BusApp() {
  
   return (
     <>
-    <Header/>
     <Routes >
           {/* <Route exact path ='/signin' element ={<AdminSignUp/>}></Route>  */}
 
-      <Route  exact path ='/' element ={<Homepage/>}></Route>
-      <Route  path ='/home' element ={<Cards/>}></Route>
-       <Route  path ='/bookings' element ={<Bookings/>}></Route> 
-        <Route  path= "/bus" element ={<BusList />}></Route>   
-        <Route  path= "/bus/edit" element ={<BusEdit />}></Route>   
-        <Route  path= "/bus/new" element ={<BusAdd/>}></Route> 
-        <Route   path= "/routes" element ={<RouteList/>}></Route>  
-          <Route path='/Route/new' element={<RouteAdd />}></Route>
-          <Route path='/route/edit' element={<RouteEdit />}></Route>
+      <Route  exact path ='/admin/home' element ={<Cards/>}></Route>
+       <Route exact  path ='/admin/bookings' element ={<Bookings/>}></Route> 
+        <Route exact  path= "/admin/bus" element ={<BusList />}></Route>   
+        <Route exact  path= "/admin/bus/edit" element ={<BusEdit />}></Route>   
+        <Route  exact path= "/admin/bus/new" element ={<BusAdd/>}></Route> 
+        <Route  exact  path= "/admin/routes" element ={<RouteList/>}></Route>  
+          <Route exact  path='/admin/Route/new' element={<RouteAdd />}></Route>
+          <Route exact  path='/admin/route/edit' element={<RouteEdit />}></Route>
 {/* 
       <Route exact path ='/login' element ={<AdminLogin/>}></Route>  */}
+      <Route path ='/' element ={<Homepage/>}></Route>
 
     </Routes>
    </>
   )
 }
 
-export default App
+export default BusApp
