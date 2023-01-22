@@ -25,9 +25,10 @@ function ClientLogin({clientUser}) {
             if (r.ok) {
             
         r.json().then(user => { 
-             clientUser(user)
+            clientUser(user)
+        //    localStorage.setItem("userType", user.userType)
              navigate("/home")
-             localStorage.setItem("userType", "client")
+            
             }) 
         }
        

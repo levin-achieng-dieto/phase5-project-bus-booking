@@ -12,7 +12,7 @@ import TicketPage from './TicketPage/TicketPage';
 function HomeApp() {
   return (
     <>
-   
+    
     <Routes >
      {/* <Route exact path ='/home' element ={<Cards/>}></Route> */}
      <Route exact  path ='/buses' element ={<BusList/>}></Route>

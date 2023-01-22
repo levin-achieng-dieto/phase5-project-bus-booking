@@ -16,7 +16,7 @@ function AdminSignUp({setAdminUser}) {
     function handleSubmit(e){
         e.preventDefault();
         fetch("/admin-signup", {
-            mathod: "POST",
+            method: "POST",
             headers: {
                 "Content-Type": "application/json"
             },
@@ -31,7 +31,7 @@ function AdminSignUp({setAdminUser}) {
             if (r.ok) {
                 r.json().then((user) => setAdminUser(user))
             }
-            navigate("/")
+            navigate("/header")
         });
     }
     

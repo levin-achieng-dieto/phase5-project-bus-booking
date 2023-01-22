@@ -11,12 +11,14 @@ import Home from "./Clients/Home";
 import AdminLogin from "./components/Auth/AdminLogin";
 import ClientLogin from "./components/Auth/ClientLogin";
 import ClientSignUp from "./components/Auth/ClientSignUp";
-
+import AdminSignUp from "./components/Auth/AdminSignUp";
+import { useLoggedInContext } from './components/Auth/Context/LoginContext';
 
 function App() {
-  const [adminUser, setAdminUser] = useState("")
-  const [clientUser, setClientUser] =useState("")
-  
+
+  const [adminUser, setAdminUser] = useState(null)
+  const [clientUser, setClientUser] =useState(null)
+  const {loggedIn, setLoggedIn} = useLoggedInContext()
 
   useEffect(() => {
     fetch("/admin-me").then((r) => {
@@ -29,28 +31,39 @@ function App() {
   useEffect(() => {
     fetch("/client-me").then((r) => {
       if (r.ok){
-        r.json.then((user) => setClientUser(user))
+        r.json.then((user) => setLoggedIn(user))
       }
     })
   }, [])
+  console.log(loggedIn)
+  // console.log(userType)
   return (
-      <>
-  {
-    localStorage.getItem('userType') == 'admin'?
     <>
-        <Header />
+      
+  {
+    localStorage.getItem('userType') === 'admin'?
+    <>
+        <Header/>
         <BusApp />
     </> :
-    localStorage.getItem('userType') == 'client'?
+    localStorage.getItem('userType') === 'client'?
     <>
-        <Home />
+        <Home/>
         <HomeApp />
-    </> :
-    <ClientLogin />
-}
 
+    </> :
+    <Routes>
+   <Route path="/clientsignup" element={<ClientSignUp setClientUser={setLoggedIn}/>} />
+   <Route path="/adminsignup" element={<AdminSignUp setAdminUser={setLoggedIn}/>} />
+   <Route path="/clientlogin" element={<ClientLogin clientUser={setLoggedIn}/>} />
+   <Route path="/adminlogin" element={<AdminLogin adminUser={setLoggedIn}/>} />
+   
+
+    </Routes>
+  }
     </>
   );
+
 }
 
 export default App;

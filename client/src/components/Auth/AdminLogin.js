@@ -7,7 +7,7 @@ import { useNavigate, Link } from "react-router-dom"
 
 
 
-function LoginUi({adminUser}) {
+function AdminLogin({adminUser}) {
 
   const navigate = useNavigate();
   const [username, setUsername] = useState("")
@@ -25,7 +25,7 @@ function LoginUi({adminUser}) {
       if (r.ok) {
         r.json().then((user) => adminUser(user))
       }
-      navigate("/")
+      navigate("/header")
     })
   }
 
@@ -67,4 +67,4 @@ function LoginUi({adminUser}) {
   );
 }
 
-export default LoginUi;
+export default AdminLogin;

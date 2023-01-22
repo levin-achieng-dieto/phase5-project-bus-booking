@@ -40,7 +40,7 @@ const BookingForm = () => {
         headers:{"content-type":"application/json"},
         body:JSON.stringify(formData)
       }).then((res)=>{
-        alert('Bus Booked successfully.')
+        alert('Form submitted successfully.')
         navigate('/seat-selection');
       }).catch((err)=>{
         console.log(err.message)

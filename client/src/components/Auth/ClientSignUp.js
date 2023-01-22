@@ -13,12 +13,13 @@ function ClientSignUp({setClientUser}) {
     const [password, setPassword] = useState("")
     const [passwordConfirmation, setPasswordConfirmation] = useState("")
 
-    function handleSubmit(e){
+   async function handleSubmit(e){
         e.preventDefault();
-        fetch("/client-signup", {
-            mathod: "POST",
+        await fetch("/client-signup", {
+            method: "POST",
             headers: {
                 "Content-Type": "application/json"
+                
             },
             body: JSON.stringify({
                 username,
@@ -29,11 +30,15 @@ function ClientSignUp({setClientUser}) {
             })
         }).then((r) => {
             if (r.ok) {
-                r.json().then((user) => setClientUser(user))
-            }
-            navigate("/layout")
-        });
-    }
+                r.json().then(user => {
+                    setClientUser(user)
+                    // localStorage.setItem("userType", user.userType)
+                    navigate("/home")
+            })
+        }
+        })
+        
+    
     
   return (
     <section>
@@ -46,8 +51,8 @@ function ClientSignUp({setClientUser}) {
                     <input type="text" placeholder='username' required autoComplete='off' value={username} onChange={(e) => setUsername(e.target.value)} />
                     <input type="text" placeholder='address' required autoComplete='off' value={address} onChange={(e) => setAddress(e.target.value)} />
                     <input type="text" placeholder='email' required autoComplete='off' value={email} onChange={(e) => setEmail(e.target.value)} />
-                    <input type="text" placeholder='password' id='password_confirmation' name='password_confirmation' required autoComplete='current-password' value={password} onChange={(e) => setPassword(e.target.value)}/>
-                    <input type="text" placeholder='confirm password' id='password' name='password' required autoComplete='current-password' value={passwordConfirmation} onChange={(e) => setPasswordConfirmation(e.target.value)}/>
+                    <input type="password" placeholder='password' id='password_confirmation' name='password_confirmation' required autoComplete='current-password' value={password} onChange={(e) => setPassword(e.target.value)}/>
+                    <input type="password" placeholder='confirm password' id='password' name='password' required autoComplete='current-password' value={passwordConfirmation} onChange={(e) => setPasswordConfirmation(e.target.value)}/>
                     <div>
                         <button type='submit' className='btn'>Sign Up</button>
                     </div>
@@ -60,5 +65,5 @@ function ClientSignUp({setClientUser}) {
     </section>
   )
 }
-
-export default ClientSignUp
+}
+export default ClientSignUp;
