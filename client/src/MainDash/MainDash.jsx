@@ -10,7 +10,6 @@ import Buses from '../components/Bus/Buses';
 import Customers from '../components/Customers/Customers';
 import User from '../components/Customers/User';
 import SeatSelection from '../components/Seats/SeatSelection';
-import BusBooking from '../components/Bookings/BusBooking';
 import AddBus from '../components/Bus/AddBus';
 import AddUser from '../components/Customers/AddUser';
 import Booking from '../components/Booking1/Booking';

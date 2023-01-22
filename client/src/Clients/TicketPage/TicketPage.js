@@ -3,16 +3,16 @@ import "./TicketPage.css";
 export default function TicketPage() {
 
 
-  const getLocationData = () => {
-    let from = localStorage.getItem("start");
-    let to = localStorage.getItem("destination");
-    return (
-      <div>
-        <p style={{color: 'black'}} >From: {from}</p>
-        <p style={{color: 'black'}} >To: {to}</p>
-      </div>
-    );
-  };
+  // const getLocationData = () => {
+  //   let from = localStorage.getItem("start");
+  //   let to = localStorage.getItem("destination");
+  //   return (
+  //     <div>
+  //       <p style={{color: 'black'}} >From: {from}</p>
+  //       <p style={{color: 'black'}} >To: {to}</p>
+  //     </div>
+  //   );
+  // };
   const getPassengerName = () => {
     let nameArray = localStorage.getItem("nameData");
     let names = JSON.parse(nameArray);
@@ -56,8 +56,10 @@ export default function TicketPage() {
             <div className="ticket__notch ticket__notch--right"></div>
           </div>
           <div className="ticket__body">
+
             <section className="ticket__section">
-              {getLocationData()}
+            <p style={{color: 'black'}} >Booked Seats</p>
+              {/* {getLocationData()} */}
               {getSeatNumbers()}
               <div style={{color: '#black'}} >
                 Your seats are together <span>{getDateValue()}</span>
