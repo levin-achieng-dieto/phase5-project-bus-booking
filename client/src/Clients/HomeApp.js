@@ -12,12 +12,13 @@ import AdminLogin from './Auth/AdminLogin';
 function HomeApp() {
   return (
     <>
-      <Home/>
+      {/* <Homepage/> */}
         <Routes >
-          <Route  exact path ='/' element ={<Homepage/>}></Route>
+          <Route path="/" element={<Homepage />}></Route>
+          <Route path ='/home' element ={<Home/>}></Route>
           <Route  path ='/customer-page' element ={<Cards/>}></Route>
           <Route  path ='/buses' element ={<BusList/>}></Route>
-          <Route path="/adminsignup" element={<AdminSignUp />}></Route>
+          <Route exact path="/adminsignup" element={<AdminSignUp />}></Route>
           <Route path="/adminlogin" element={<AdminLogin />}></Route>
         </Routes>
      </>

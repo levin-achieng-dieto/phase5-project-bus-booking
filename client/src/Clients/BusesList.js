@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 // import { Link, useNavigate } from "react-router-dom";
 import "./BusesList.css"
 // import "./BusesList1.css"
+import Home from "./Home";
 
 const BusList= () => {
     const [empdata, empdatachange] = useState(null);
@@ -39,6 +40,7 @@ const BusList= () => {
     }, [])
     return (
         <div className="container">
+            <Home />
             <div className="card">
                 <div className="card-title">
                     <h2 style={{color:"black"}}>Routes</h2>

@@ -10,7 +10,10 @@ import Header from "./Header";
 import RouteList from '../busesRoutes/RouteList';
 import RouteAdd from '../busesRoutes/RouteAdd';
 import RouteEdit from '../busesRoutes/RouteEdit';
-import Homepage from '../components/Homepage/Homepage';
+// import Homepage from '../components/Homepage/Homepage';
+import Homepage from '../Clients/Homepage';
+import AdminSignUp from '../Clients/Auth/AdminSignUp';
+import AdminLogin from '../Clients/Auth/AdminLogin';
 
 
 
@@ -21,10 +24,11 @@ function App() {
  
   return (
     <>
-    <Header/>
+    {/* <Homepage /> */}
+    {/* <Header/> */}
     <Routes >
           {/* <Route exact path ='/signin' element ={<AdminSignUp/>}></Route>  */}
-
+      {/* <Route path="/header" element={<Header />}></Route> */}
       <Route  exact path ='/' element ={<Homepage/>}></Route>
       <Route  path ='/home' element ={<Cards/>}></Route>
        <Route  path ='/bookings' element ={<Bookings/>}></Route> 
@@ -34,6 +38,8 @@ function App() {
         <Route   path= "/routes" element ={<RouteList/>}></Route>  
           <Route path='/Route/new' element={<RouteAdd />}></Route>
           <Route path='/route/edit' element={<RouteEdit />}></Route>
+          <Route path="/adminsignup" element={<AdminSignUp />}></Route>
+          <Route path="/adminlogin" element={<AdminLogin />}></Route>
 {/* 
       <Route exact path ='/login' element ={<AdminLogin/>}></Route>  */}
 

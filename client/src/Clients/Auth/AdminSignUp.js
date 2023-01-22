@@ -3,6 +3,8 @@ import bgImg from './bus.avif';
 //import { useForm } from 'react-hook-form';
 import "./AdminSignUp.css"
 import { useNavigate, Link } from "react-router-dom"
+import Header from '../../buses/Header';
+
 
 function AdminSignUp({setAdminUser}) {
 
@@ -36,7 +38,9 @@ function AdminSignUp({setAdminUser}) {
     }
     
   return (
-    <section>
+    <>
+        {/* <Header></Header> */}
+        <section>
         <div className="register">
             <div className="col-1">
                 <h2 style={{color:"#092147"}} >Admin Sign Up</h2>
@@ -49,7 +53,7 @@ function AdminSignUp({setAdminUser}) {
                     <input type="text" placeholder='password' id='password_confirmation' name='password_confirmation' required autoComplete='current-password' value={password} onChange={(e) => setPassword(e.target.value)}/>
                     <input type="text" placeholder='confirm password' id='password' name='password' required autoComplete='current-password' value={passwordConfirmation} onChange={(e) => setPasswordConfirmation(e.target.value)}/>
                     <div>
-                        <Link to="/customer-page" >
+                        <Link to="/home" >
                             <button type='submit' className='btn'>Sign Up</button>
                         </Link>
                         <Link to="/adminlogin" >
@@ -63,6 +67,8 @@ function AdminSignUp({setAdminUser}) {
             </div>
         </div>
     </section>
+    </>
+    
   )
 }
 

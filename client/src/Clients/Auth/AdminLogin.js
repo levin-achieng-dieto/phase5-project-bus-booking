@@ -4,7 +4,7 @@ import profile from "./profile.png";
 import email from "./email.jpg";
 import pass from "./pass.png";
 import { useNavigate, Link } from "react-router-dom"
-
+import Header from "../../buses/Header";
 
 
 function AdminLogin({adminUser}) {
@@ -32,7 +32,9 @@ function AdminLogin({adminUser}) {
 
 
   return (
-    <div className="main">
+    <>
+      <Header></Header>
+      <div className="main">
       <div className="sub-main">
         <div>
           <div className="imgs">
@@ -51,7 +53,9 @@ function AdminLogin({adminUser}) {
               <input type="password" placeholder="password" className="name" required autoComplete="off" value={password} onChange={(e) => setPassword(e.target.value)}/>
             </div>
             <div className="login-button">
-              <button type="submit">Login</button>
+              <Link to="/home">
+                <button type="submit">Login</button>
+              </Link>
             </div>
             <div>
               <Link to="/adminsignup">
@@ -64,6 +68,8 @@ function AdminLogin({adminUser}) {
         </div>
       </div>
     </div>
+    </>
+    
   );
 }
 
