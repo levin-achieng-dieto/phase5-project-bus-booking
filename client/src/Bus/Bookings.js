@@ -37,6 +37,7 @@ const Bookings= () => {
                                 <td>Destination</td>
                                 <td>Seat</td>
                                 <td>Amount</td>
+                                <td>No of Passagers</td>
                               
                             </tr>
                         </thead>
@@ -52,6 +53,7 @@ const Bookings= () => {
                                         <td>{item.to}</td>
                                         <td>{item.seat}</td>
                                         <td>{item.cost}</td>
+                                        <td>{item.no_of_passangers}</td>
                                     
                                     </tr>
                                 ))

@@ -8,22 +8,14 @@ const BusList= () => {
     // const navigate = useNavigate();
     const [searchTerm, setSearchTerm] = useState("");
 
-  
-    // const LoadEdit = (id) => {
-    //     navigate("/routes/edit/" + id);
-    // }
-    // const Removefunction = (id) => {
-    //     if (window.confirm('Do you want to remove the route?')) {
-    //         fetch("routes/" + id, {
-    //             method: "DELETE"
-    //         }).then((res) => {
-    //             alert('Route Removed successfully.')
-    //             window.location.reload();
-    //         }).catch((err) => {
-    //             console.log(err.message)
-    //         })
-    //     }
-    // }
+//   const filtereddata =  empdata .filter((val) => {
+//     if(searchTerm === ""){
+//       return val;
+//     }else if(val.to.toLowerCase().includes(searchTerm.toLowerCase())){
+//       return val;
+//     }
+//   })
+ 
 
 
 
@@ -41,11 +33,15 @@ const BusList= () => {
         <div className="container">
             <div className="card">
                 <div className="card-title">
-                    <h2 style={{color:"black"}}>Routes</h2>
+                    <h2 style={{color:"black"}}>Available Buses</h2>
                 </div>
-                <input id="searchInput" type="text" placeholder="Search destination..." onChange={(event) => {
-            setSearchTerm(event.target.value);
-          }} />
+                <input id="searchInput" type="text" 
+                placeholder="Search your destination..." 
+                onChange={(e)=>{setSearchTerm(e.target.value)}}
+                 />
+         
+          
+         
 
 
           
@@ -61,7 +57,7 @@ const BusList= () => {
               })
               .map((val) => {
                 return(
-                  <div className="template" key={val.id}>
+                  <div  key={val.id}>
                       <img src={val.image} alt="" />
                       <h3>{val.busnumber}</h3>
                       <h3> Destination:{val.to}</h3>
@@ -84,6 +80,7 @@ const BusList= () => {
                                 <td>Date</td>
                                 <td>Time</td>
                                 <td>Amount</td>
+                                <td>Book</td>
                                
                             </tr>
                         </thead>
@@ -100,6 +97,10 @@ const BusList= () => {
                                         <td>{item.date}</td>
                                         <td>{item.time}</td>
                                         <td>{item.cost}</td>
+                                        <td><a href="/bookings" onClick={() => { }} className="btn btn-success">Book Now</a>
+                                           
+                                          
+                                        </td>
                                     
                                     </tr>
                                 ))

@@ -45,9 +45,9 @@ bus8 = Bus.create(image: route4.image, number_plate: route3.busnumber, fleet_no:
     # t.string "cost"
 
 
-booking1 = Booking.create(name: client1.username, phonenumber: client1.phone_number, busnumber: bus1.number_plate, from: route1.from, to: route1.to,seat: "F2", cost: route1.cost)
-booking2 = Booking.create(name: client3.username, phonenumber: client3.phone_number, busnumber: bus2.number_plate, from: route4.from, to: route4.to,seat: "F3", cost: route4.cost)
-booking3 = Booking.create(name: client2.username, phonenumber: client2.phone_number, busnumber: bus4.number_plate, from: route3.from, to: route3.to,seat: "F4", cost: route3.cost)
+booking1 = Booking.create(name: client1.username, phonenumber: client1.phone_number, busnumber: bus1.number_plate, from: route1.from, to: route1.to,seat: "F2", cost: route1.cost, client_id: client1.id, bus_id: bus1.id, no_of_passangers: "1")
+booking2 = Booking.create(name: client3.username, phonenumber: client3.phone_number, busnumber: bus2.number_plate, from: route4.from, to: route4.to,seat: "F3", cost: route4.cost, client_id: client2.id, bus_id: bus2.id, no_of_passangers: "1")
+booking3 = Booking.create(name: client2.username, phonenumber: client2.phone_number, busnumber: bus4.number_plate, from: route3.from, to: route3.to,seat: "F4", cost: route3.cost, client_id: client3.id, bus_id: bus3.id, no_of_passangers: "1")
 # booking2 = Booking.create(from: "Nairobi", to: "Eldoret", date: "2/1/2023", price: "1000", client_id: client2.id, bus_id: bus3.id, no_of_passangers: 3)
 # booking3 = Booking.create(from: "Mombasa", to: "Kisumu", date: "1/1/2023", price: "1500", client_id: client1.id, bus_id: bus2.id, no_of_passangers: 1)
 

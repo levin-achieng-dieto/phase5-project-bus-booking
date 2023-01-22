@@ -28,6 +28,9 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_10_071819) do
     t.string "to"
     t.string "seat"
     t.string "cost"
+    t.string "client_id"
+    t.string "bus_id"
+    t.string "no_of_passangers"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

@@ -7,8 +7,8 @@ class BookingsController < ApplicationController
     end
 
     def create
-        bookings = Booking.create!(booking_params)
-        render json: bookings, status: :created
+        booking = Booking.create!(booking_params)
+        render json: booking, status: :created
     end
 
     def update
@@ -20,7 +20,7 @@ class BookingsController < ApplicationController
     def destroy 
         booking = Booking.find(params[:id])
         booking.destroy
-        head :no_content
+        render json: booking, status: :not_found
     end
 
     def show
@@ -30,7 +30,7 @@ class BookingsController < ApplicationController
 
     private
     def booking_params
-        params.permit(:name, :phonenumber, :busnumber, :from,:to, :seat, :cost)
+        params.permit(:name, :phonenumber, :busnumber, :from,:to, :seat, :cost, :bus_id, :client_id, :no_of_passangers)
     end
 
     def rescue_from_not_found_record

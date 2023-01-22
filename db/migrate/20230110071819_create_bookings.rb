@@ -8,6 +8,9 @@ class CreateBookings < ActiveRecord::Migration[7.0]
       t.string :to
       t.string :seat
       t.string :cost
+      t.string :client_id
+      t.string :bus_id
+      t.string :no_of_passangers
 
       t.timestamps
     end

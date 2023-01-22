@@ -7,8 +7,10 @@
     "bootstrap": "^5.2.3",
     "enquire-js": "^0.1.0",
     "framer-motion": "^8.0.2",
+    "jwt-decode": "^3.1.2",
     "rc-queue-anim": "^2.0.0",
     "rc-scroll-anim": "^2.7.6",
+    "react-credit-cards": "^0.8.3",
     "react-document-title": "^2.0.3",
     "styled-components": "^5.3.6"
   },

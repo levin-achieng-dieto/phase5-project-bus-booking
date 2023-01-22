@@ -12,11 +12,14 @@ import {Link} from "react-router-dom"
         
       <div className='navigation'>
 
-      <Link to="/customer-page">
+      <Link to="/home">
       <button  style={{color: "black"}} className='btn'>DashBoard</button>
       </Link>
       <Link to="/buses">
       <button style={{color: "lack"}} className='btn'>Buses</button>
+      </Link>
+      <Link to="/ticket">
+      <button style={{color: "black"}} className='btn'>Ticket</button>
       </Link>
 
       <Link to="/">
